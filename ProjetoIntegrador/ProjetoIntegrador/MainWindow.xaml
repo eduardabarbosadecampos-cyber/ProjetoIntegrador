@@ -1,4 +1,4 @@
-﻿<Window x:Class="ProjetoIntegrador.MainWindow"
+﻿<Window x:Name="Tela_de_Login" x:Class="ProjetoIntegrador.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Teste" HorizontalAlignment="Left" Margin="326,233,0,0" VerticalAlignment="Top"/>
-
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="Home.xaml"/>
     </Grid>
 </Window>
