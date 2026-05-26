@@ -11,5 +11,16 @@
     <Canvas Background="White">
         <Rectangle HorizontalAlignment="Center" Height="74" VerticalAlignment="Top" Width="800" Fill="#FF00BF63"/>
         <Label x:Name="Olá_Cliente" Content="Olá cliente" HorizontalAlignment="Left" Margin="35,6,0,0" VerticalAlignment="Top" FontFamily="Freestyle Script" Height="62" Width="196" FontSize= "50" FontWeight="Bold"/>
+
+        <TabControl HorizontalAlignment="Center" Canvas.Top="74" VerticalAlignment="Top" Height="376" Width="800">
+
+            <TabItem Header="Produtos/Roupas" Width="150" Height="50" FontFamily="Arial" FontSize="16"/>
+
+            <TabItem Header="Clientes" Width="150" Height="50" FontFamily="Arial" FontSize="16"/>
+
+            <TabItem Header="Vendas" Width="150" Height="50" FontFamily="Arial" FontSize="16"/>
+
+        </TabControl>
+
     </Canvas>
 </Page>

@@ -19,6 +19,7 @@ namespace ProjetoIntegrador
         public MainWindow()
         {
             InitializeComponent();
+            //ConnectBD.AbrirConexao("server=localhost;user=root;password=root;database=Loja");
         }
     }
 }
