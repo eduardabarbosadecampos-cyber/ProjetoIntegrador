@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoIntegrador"
         mc:Ignorable="d"
+        WindowStyle="None"
+        WindowState="Maximized"
+        ResizeMode="NoResize"
+        Background="#F3F4F6"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="Home.xaml"/>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="Home.xaml" Navigated="MainFrame_Navigated"/>
     </Grid>
 </Window>

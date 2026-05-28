@@ -4,25 +4,284 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProjetoIntegrador"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Home">
+      Title="PDV Loja"
+      Width="1400"
+      Height="850"
+     
+      Background="#F3F4F6" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-    <Canvas Background="White">
-        <Rectangle HorizontalAlignment="Center" Height="74" VerticalAlignment="Top" Width="800" Fill="#FF00BF63"/>
-        <Label x:Name="Olá_Cliente" Content="Olá cliente" HorizontalAlignment="Left" Margin="35,6,0,0" VerticalAlignment="Top" FontFamily="Freestyle Script" Height="62" Width="196" FontSize= "50" FontWeight="Bold"/>
+    <Grid>
 
-        <TabControl HorizontalAlignment="Center" Canvas.Top="74" VerticalAlignment="Top" Height="376" Width="800" SelectionChanged="TabControl_SelectionChanged">
+        <!-- DEFINIÇÃO DAS COLUNAS -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-            <TabItem Header="Produtos/Roupas" Width="150" Height="50" FontFamily="Century Gothic" FontSize="16"/>
+        <!-- MENU LATERAL -->
+        <Border Background="#0F172A"
+             Grid.Column="0">
 
-            <TabItem Header="Clientes" Width="150" Height="50" FontFamily="Century Gothic" FontSize="16"/>
+            <Grid>
 
-            <TabItem Header="Vendas" Width="150" Height="50" FontFamily="Century Gothic" FontSize="16"/>
-            <TabItem Header="Estoque" Width="150" Height="50" FontFamily="Century Gothic" FontSize="16" Margin="0,-1,0,1"/>
-            <TabItem Header="Relatórios" Width="150" Height="50" FontFamily="Century Gothic" FontSize="16" Margin="0,-1,0,1"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
 
-        </TabControl>
+                <!-- LOGO -->
+                <Border Background="#111827"
+                     Height="90">
 
-    </Canvas>
+                    <StackPanel Orientation="Horizontal"
+                             VerticalAlignment="Center"
+                             Margin="25,0">
+
+                        <Border Width="50"
+                             Height="50"
+                             CornerRadius="12"
+                             Background="#22C55E">
+
+                            <TextBlock Text="🛒"
+                                    FontSize="26"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                        </Border>
+
+                        <TextBlock Text="PDV LOJA"
+                                Foreground="White"
+                                FontSize="34"
+                                FontWeight="Bold"
+                                Margin="18,0,0,0"
+                                VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- MENU -->
+                <StackPanel Grid.Row="1"
+                         Margin="20,25">
+
+                    <!-- BOTÃO -->
+                    <Button Content="🛒 Vendas" FontSize="45" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    <!-- ITEM -->
+
+                </StackPanel>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- Encerrar sistema -->
+                <Button Margin="0,670,0,0" Grid.Row="1" Grid.RowSpan="2" Background="Red" Click="Exit_Sistema_Click">
+
+                    <StackPanel Orientation="Horizontal"
+                             VerticalAlignment="Center"
+                             Margin="30,0">
+
+                        <TextBlock Text="⏻"
+                                Foreground="White"
+                                FontSize="48" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,5"/>
+
+                        <TextBlock Text="Encerrar sistema"
+                                Foreground="White"
+                                FontSize="20"
+                                Margin="15,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+            </Grid>
+        </Border>
+
+        <!-- CONTEÚDO -->
+        <Grid Grid.Column="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- TOPBAR -->
+            <Border Background="White"
+                 Height="90"
+                 BorderBrush="#E5E7EB"
+                 BorderThickness="0,0,0,1">
+
+                <Grid Margin="30,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel VerticalAlignment="Center">
+
+                        <TextBlock Text="Olá, Eduarda!"
+                                FontSize="36"
+                                FontWeight="Bold"
+                                Foreground="#111827"/>
+
+                        <TextBlock Text="Bem-vindo ao sistema PDV"
+                                FontSize="18"
+                                Foreground="#6B7280"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1"
+                             Orientation="Horizontal"
+                             VerticalAlignment="Center">
+
+                        <Border Background="#DCFCE7"
+                             Padding="18,10"
+                             CornerRadius="20">
+
+                            <TextBlock Text="● CAIXA ABERTO"
+                                    Foreground="#16A34A"
+                                    FontWeight="Bold"
+                                    FontSize="18"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- ÁREA -->
+            <ScrollViewer Grid.Row="1">
+
+                <WrapPanel Margin="30">
+
+                    <!-- CARD -->
+                    <Border Width="320"
+                         Height="220"
+                         Background="White"
+                         CornerRadius="18"
+                         Margin="0,0,25,25"
+                         BorderBrush="#E5E7EB"
+                         BorderThickness="1">
+
+                        <StackPanel VerticalAlignment="Center">
+
+                            <TextBlock Text="🛒"
+                                    FontSize="55"
+                                    HorizontalAlignment="Center"/>
+
+                            <TextBlock Text="Vendas"
+                                    FontSize="34"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,15,0,0"/>
+
+                            <TextBlock Text="Abrir nova venda"
+                                    FontSize="18"
+                                    Foreground="#6B7280"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- CARD -->
+                    <Border Width="320"
+                         Height="220"
+                         Background="White"
+                         CornerRadius="18"
+                         Margin="0,0,25,25"
+                         BorderBrush="#E5E7EB"
+                         BorderThickness="1">
+
+                        <StackPanel VerticalAlignment="Center">
+
+                            <TextBlock Text="📦"
+                                    FontSize="55"
+                                    HorizontalAlignment="Center"/>
+
+                            <TextBlock Text="Produtos"
+                                    FontSize="34"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,15,0,0"/>
+
+                            <TextBlock Text="Consultar produtos"
+                                    FontSize="18"
+                                    Foreground="#6B7280"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- CARD -->
+                    <Border Width="320"
+                         Height="220"
+                         Background="White"
+                         CornerRadius="18"
+                         Margin="0,0,25,25"
+                         BorderBrush="#E5E7EB"
+                         BorderThickness="1">
+
+                        <StackPanel VerticalAlignment="Center">
+
+                            <TextBlock Text="👥"
+                                    FontSize="55"
+                                    HorizontalAlignment="Center"/>
+
+                            <TextBlock Text="Clientes"
+                                    FontSize="34"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,15,0,0"/>
+
+                            <TextBlock Text="Cadastrar clientes"
+                                    FontSize="18"
+                                    Foreground="#6B7280"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- CARD -->
+                    <Border Width="320"
+                         Height="220"
+                         Background="White"
+                         CornerRadius="18"
+                         Margin="0,0,25,25"
+                         BorderBrush="#E5E7EB"
+                         BorderThickness="1">
+
+                        <StackPanel VerticalAlignment="Center">
+
+                            <TextBlock Text="📊"
+                                    FontSize="55"
+                                    HorizontalAlignment="Center"/>
+
+                            <TextBlock Text="Relatórios"
+                                    FontSize="34"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,15,0,0"/>
+
+                            <TextBlock Text="Indicadores"
+                                    FontSize="18"
+                                    Foreground="#6B7280"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                </WrapPanel>
+            </ScrollViewer>
+
+        </Grid>
+
+    </Grid>
 </Page>

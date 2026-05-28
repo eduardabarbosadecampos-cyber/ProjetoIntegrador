@@ -21,5 +21,10 @@ namespace ProjetoIntegrador
             InitializeComponent();
             //ConnectBD.AbrirConexao("server=localhost;user=root;password=root;database=Loja");
         }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

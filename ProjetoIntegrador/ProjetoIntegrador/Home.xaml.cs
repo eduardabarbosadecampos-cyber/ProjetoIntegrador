@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx.Connection;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,16 @@ namespace ProjetoIntegrador
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void Exit_Sistema_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
