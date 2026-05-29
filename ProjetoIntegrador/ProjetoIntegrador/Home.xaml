@@ -63,13 +63,13 @@
                          Margin="10,10">
 
                     <!-- BOTÃO -->
-                    <Button x:Name="BtnVendas" Content="🛒 Vendas" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
-                    <Button x:Name="BtnProdutos" Content="📦 Produtos" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
-                    <Button x:Name="BtnClientes" Content="👥 Clientes" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
-                    <Button x:Name="BtnEstoque" Content="🚚 Estoque" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
-                    <Button x:Name="BtnRelatorios" Content="📊 Relatórios" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
-                    <Button x:Name="BtnFinanceiro" Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
-                    <Button x:Name="BtnConfiguracoes" Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                    <Button x:Name="BtnVendas" Content="🛒 Vendas" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
+                    <Button x:Name="BtnProdutos" Content="📦 Produtos" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
+                    <Button x:Name="BtnClientes" Content="👥 Clientes" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
+                    <Button x:Name="BtnEstoque" Content="🚚 Estoque" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
+                    <Button x:Name="BtnRelatorios" Content="📊 Relatórios" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
+                    <Button x:Name="BtnFinanceiro" Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
+                    <Button x:Name="BtnConfiguracoes" Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
 
                     <!-- ITEM -->
 

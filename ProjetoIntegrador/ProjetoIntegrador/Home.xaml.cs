@@ -25,22 +25,35 @@ namespace ProjetoIntegrador
         {
             InitializeComponent();
             MenuButtons = new List<Button> { BtnVendas, BtnProdutos, BtnClientes, BtnEstoque, BtnRelatorios, BtnFinanceiro, BtnConfiguracoes };
+            RefreshMenus(BtnVendas);
         }
-
-        private void SetActiveButton()
-        {
-
-        }
-
 
         private void Exit_Sistema_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OpenMenu(object sender, RoutedEventArgs e)
         {
+            if (sender is Button btn)
+            {
+                RefreshMenus(btn);
+            }
+        }
 
+        private void RefreshMenus(Button curMenu)
+        {
+            foreach (var btn in MenuButtons)
+            {
+                if (btn == curMenu)
+                {
+                    btn.Background = (Brush)new BrushConverter().ConvertFrom("#22C55E");
+                }
+                else
+                {
+                    btn.Background = (Brush)new BrushConverter().ConvertFrom("#6B7280");
+                }
+            }
         }
     }
 }
