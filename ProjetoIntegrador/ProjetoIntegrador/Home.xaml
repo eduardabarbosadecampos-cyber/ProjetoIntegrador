@@ -63,16 +63,22 @@
                          Margin="20,25">
 
                     <!-- BOTÃO -->
-                    <Button Content="🛒 Vendas" FontSize="45" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                    <Button Content="🛒 Vendas" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+                    <Button Content="📦 Produtos" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+                    <Button Content="👥 Clientes" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+                    <Button Content="🚚 Estoque" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+                    <Button Content="📊 Relatórios" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+                    <Button Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+                    <Button Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
+
+
+
+
+
+
+
+
+
 
                     <!-- ITEM -->
 
@@ -160,123 +166,10 @@
             <!-- ÁREA -->
             <ScrollViewer Grid.Row="1">
 
-                <WrapPanel Margin="30">
+                <WrapPanel Margin="14">
 
                     <!-- CARD -->
-                    <Border Width="320"
-                         Height="220"
-                         Background="White"
-                         CornerRadius="18"
-                         Margin="0,0,25,25"
-                         BorderBrush="#E5E7EB"
-                         BorderThickness="1">
-
-                        <StackPanel VerticalAlignment="Center">
-
-                            <TextBlock Text="🛒"
-                                    FontSize="55"
-                                    HorizontalAlignment="Center"/>
-
-                            <TextBlock Text="Vendas"
-                                    FontSize="34"
-                                    FontWeight="Bold"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,15,0,0"/>
-
-                            <TextBlock Text="Abrir nova venda"
-                                    FontSize="18"
-                                    Foreground="#6B7280"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,8,0,0"/>
-                        </StackPanel>
-                    </Border>
-
-                    <!-- CARD -->
-                    <Border Width="320"
-                         Height="220"
-                         Background="White"
-                         CornerRadius="18"
-                         Margin="0,0,25,25"
-                         BorderBrush="#E5E7EB"
-                         BorderThickness="1">
-
-                        <StackPanel VerticalAlignment="Center">
-
-                            <TextBlock Text="📦"
-                                    FontSize="55"
-                                    HorizontalAlignment="Center"/>
-
-                            <TextBlock Text="Produtos"
-                                    FontSize="34"
-                                    FontWeight="Bold"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,15,0,0"/>
-
-                            <TextBlock Text="Consultar produtos"
-                                    FontSize="18"
-                                    Foreground="#6B7280"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,8,0,0"/>
-                        </StackPanel>
-                    </Border>
-
-                    <!-- CARD -->
-                    <Border Width="320"
-                         Height="220"
-                         Background="White"
-                         CornerRadius="18"
-                         Margin="0,0,25,25"
-                         BorderBrush="#E5E7EB"
-                         BorderThickness="1">
-
-                        <StackPanel VerticalAlignment="Center">
-
-                            <TextBlock Text="👥"
-                                    FontSize="55"
-                                    HorizontalAlignment="Center"/>
-
-                            <TextBlock Text="Clientes"
-                                    FontSize="34"
-                                    FontWeight="Bold"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,15,0,0"/>
-
-                            <TextBlock Text="Cadastrar clientes"
-                                    FontSize="18"
-                                    Foreground="#6B7280"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,8,0,0"/>
-                        </StackPanel>
-                    </Border>
-
-                    <!-- CARD -->
-                    <Border Width="320"
-                         Height="220"
-                         Background="White"
-                         CornerRadius="18"
-                         Margin="0,0,25,25"
-                         BorderBrush="#E5E7EB"
-                         BorderThickness="1">
-
-                        <StackPanel VerticalAlignment="Center">
-
-                            <TextBlock Text="📊"
-                                    FontSize="55"
-                                    HorizontalAlignment="Center"/>
-
-                            <TextBlock Text="Relatórios"
-                                    FontSize="34"
-                                    FontWeight="Bold"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,15,0,0"/>
-
-                            <TextBlock Text="Indicadores"
-                                    FontSize="18"
-                                    Foreground="#6B7280"
-                                    HorizontalAlignment="Center"
-                                    Margin="0,8,0,0"/>
-                        </StackPanel>
-                    </Border>
+                  
 
                 </WrapPanel>
             </ScrollViewer>
