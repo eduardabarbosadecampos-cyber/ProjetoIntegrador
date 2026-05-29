@@ -60,38 +60,38 @@
 
                 <!-- MENU -->
                 <StackPanel Grid.Row="1"
-                         Margin="20,25">
+                         Margin="10,10">
 
                     <!-- BOTÃO -->
-                    <Button Content="🛒 Vendas" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-                    <Button Content="📦 Produtos" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-                    <Button Content="👥 Clientes" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-                    <Button Content="🚚 Estoque" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-                    <Button Content="📊 Relatórios" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-                    <Button Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-                    <Button Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Height="90"/>
-
-
-
-
-
-
-
-
-
+                    <Button x:Name="BtnVendas" Content="🛒 Vendas" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                    <Button x:Name="BtnProdutos" Content="📦 Produtos" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                    <Button x:Name="BtnClientes" Content="👥 Clientes" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                    <Button x:Name="BtnEstoque" Content="🚚 Estoque" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                    <Button x:Name="BtnRelatorios" Content="📊 Relatórios" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                    <Button x:Name="BtnFinanceiro" Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                    <Button x:Name="BtnConfiguracoes" Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
 
                     <!-- ITEM -->
 
                 </StackPanel>
 
-                
-                
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <!-- Encerrar sistema -->
                 <Button Margin="0,670,0,0" Grid.Row="1" Grid.RowSpan="2" Background="Red" Click="Exit_Sistema_Click">
 
@@ -163,16 +163,12 @@
                 </Grid>
             </Border>
 
-            <!-- ÁREA -->
-            <ScrollViewer Grid.Row="1">
+            <!-- VENDAS -->
+            <Canvas Background="White" Grid.Row="1" Height="760" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1080">
+                <Label Content="Label" Canvas.Left="56" Canvas.Top="74"/>
 
-                <WrapPanel Margin="14">
+            </Canvas>
 
-                    <!-- CARD -->
-                  
-
-                </WrapPanel>
-            </ScrollViewer>
 
         </Grid>
 

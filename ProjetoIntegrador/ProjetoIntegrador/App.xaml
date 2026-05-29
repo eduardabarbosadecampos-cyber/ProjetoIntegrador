@@ -8,6 +8,8 @@
         <Style x:Key="BotaoArredondado" TargetType="Button">
             <Setter Property="Background" Value="#22C55E"/>
             <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,2"/>
+            <Setter Property="Height" Value="90"/>
 
             <Setter Property="Template">
                 <Setter.Value>

@@ -19,10 +19,19 @@ namespace ProjetoIntegrador
     /// </summary>
     public partial class Home : Page
     {
+        internal List<Button> MenuButtons = new List<Button>();
+
         public Home()
         {
             InitializeComponent();
+            MenuButtons = new List<Button> { BtnVendas, BtnProdutos, BtnClientes, BtnEstoque, BtnRelatorios, BtnFinanceiro, BtnConfiguracoes };
         }
+
+        private void SetActiveButton()
+        {
+
+        }
+
 
         private void Exit_Sistema_Click(object sender, RoutedEventArgs e)
         {
