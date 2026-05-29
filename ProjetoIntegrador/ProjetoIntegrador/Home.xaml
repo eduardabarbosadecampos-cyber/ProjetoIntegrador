@@ -165,7 +165,44 @@
 
             <!-- VENDAS -->
             <Canvas Background="White" Grid.Row="1" Height="760" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1080">
-                <Label Content="Label" Canvas.Left="56" Canvas.Top="74"/>
+                <Label Content="Cliente" Canvas.Left="77" Canvas.Top="16" Height="57" Width="110" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Rectangle Height="1" Stroke="Black" Canvas.Top="92" Width="1080" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox Canvas.Left="192" TextWrapping="Wrap" Text="Buscar Cliente" Canvas.Top="24" Width="204" Height="42" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25"/>
+                <Label Content="Produto" Canvas.Left="116" Canvas.Top="129" Height="57" Width="120" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Content="Quantidade" Canvas.Left="69" Canvas.Top="186" Height="57" Width="169" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="Desconto" Canvas.Left="92" Canvas.Top="241" Height="57" Width="144" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Tamanho" Canvas.Left="618" Canvas.Top="129" Height="57" Width="132" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Preço Unitário" Canvas.Left="551" Canvas.Top="186" Height="57" Width="199" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Total" Canvas.Left="679" Canvas.Top="241" Height="57" Width="71" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox Canvas.Left="241" TextWrapping="Wrap" Text="" Canvas.Top="136" Width="204" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox Canvas.Left="243" TextWrapping="Wrap" Text="" Canvas.Top="193" Width="204" Height="43" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Canvas.Left="243" TextWrapping="Wrap" Text="" Canvas.Top="249" Width="204" Height="43" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.534,-0.233"/>
+                <TextBox Canvas.Left="755" TextWrapping="Wrap" Text="" Canvas.Top="136" Width="48" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Cor" Canvas.Left="848" Canvas.Top="129" Height="57" Width="58" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.592,0.558"/>
+                <TextBox Canvas.Left="911" TextWrapping="Wrap" Text="" Canvas.Top="136" Width="48" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1.123,0.421"/>
+                <TextBox Canvas.Left="755" TextWrapping="Wrap" Text="" Canvas.Top="191" Width="204" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox Canvas.Left="755" TextWrapping="Wrap" Text="" Canvas.Top="248" Width="204" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Button Content="Adicionar item" Canvas.Left="145" Canvas.Top="320" Height="40" Width="200" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FFBFFDE8" RenderTransformOrigin="0.525,0.3"/>
+                <Button Content="Remover item" Canvas.Left="618" Canvas.Top="320" Height="40" Width="200" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFBEBE"/>
+                <Label Content="+" Canvas.Left="102" Canvas.Top="313" Height="57" Width="30" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="2.796,0.488"/>
+                <Label Content="-" Canvas.Left="591" Canvas.Top="313" Height="40" Width="22" FontSize="30" RenderTransformOrigin="2.796,0.488" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Rectangle Height="1" Stroke="Black" Canvas.Top="398" Width="1080" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Itens no carrinho:" Canvas.Left="116" Canvas.Top="413" Height="57" Width="242" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Rectangle Height="1" Stroke="Black" Canvas.Top="486" Width="1080" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Label Content="Forma de Pagamento" Canvas.Left="98" Canvas.Top="508" Height="58" Width="294" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Canvas.Left="409" TextWrapping="Wrap" Text="" Canvas.Top="516" Width="204" Height="42" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Total Geral" Canvas.Left="237" Canvas.Top="566" Height="57" Width="154" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button Content="❌ Cancelar" Canvas.Left="137" Canvas.Top="660" Height="54" Width="200" FontSize="25" Background="#FF22C55E" RenderTransformOrigin="0.525,0.3" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
+                <Button Content="✔ Finalizar Venda" Canvas.Left="706" Canvas.Top="662" Height="54" Width="253" FontSize="25" Background="#FF22C55E" RenderTransformOrigin="0.514,0.538" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource BotaoArredondado}" />
 
             </Canvas>
 
