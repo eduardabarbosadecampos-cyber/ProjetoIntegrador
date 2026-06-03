@@ -10,6 +10,9 @@
 
   <ItemGroup>
     <None Remove="download %281%29.jpg" />
+    <None Remove="How we got back on top.jpg" />
+    <None Remove="moletom-vermelho_640x640+fill_ffffff.png" />
+    <None Remove="Prod_6.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +22,9 @@
 
   <ItemGroup>
     <Resource Include="download (1).jpg" />
+    <Resource Include="How we got back on top.jpg" />
+    <Resource Include="moletom-vermelho_640x640+fill_ffffff.png" />
+    <Resource Include="Prod_6.jpg" />
   </ItemGroup>
 
 </Project>

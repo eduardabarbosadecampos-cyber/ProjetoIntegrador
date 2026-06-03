@@ -189,10 +189,11 @@
             </Canvas>
 
             <!-- PRODUTOS-->
-            <Canvas>
+                <Grid Grid.Row="1">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <WrapPanel Margin="30">
 
-                    <WrapPanel Margin="110">
+
 
                         <Border Width="180"
                                 Height="250"
@@ -218,16 +219,299 @@
                                 <TextBlock Text="R$ 200,50"
                                             FontSize="15"
                                             Foreground="Green"
+                                           FontWeight="Bold"
                                             TextAlignment="Center"/>
                             </StackPanel>
 
                         </Border>
+
+                        <Border Width="180"
+                Height="250"
+                Background="White"
+                CornerRadius="10"
+                Margin="10"
+                BorderBrush="#DDD"
+                BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/How we got back on top.jpg"
+                       Height="150"
+                       Stretch="Uniform"
+                       Margin="10"/>
+
+                                <TextBlock Text="All Star Cano Alto Preto"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           TextAlignment="Center"
+                           Margin="5"/>
+
+                                <TextBlock Text="R$ 279,00"
+                           Foreground="Green"
+                           FontWeight="Bold"
+                           FontSize="15"
+                           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+                Height="250"
+                Background="White"
+                CornerRadius="10"
+                Margin="10"
+                BorderBrush="#DDD"
+                BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/moletom-vermelho_640x640+fill_ffffff.png"
+                       Height="150"
+                       Stretch="Uniform"
+                       Margin="10"/>
+
+                                <TextBlock Text="Moletom Vermelho"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           TextAlignment="Center"
+                           Margin="5"/>
+
+                                <TextBlock Text="R$ 100,90"
+                           Foreground="Green"
+                           FontWeight="Bold"
+                           FontSize="15"
+                           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+                Height="250"
+                Background="White"
+                CornerRadius="10"
+                Margin="10"
+                BorderBrush="#DDD"
+                BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/Prod_6.jpg"
+                       Height="150"
+                       Stretch="Uniform"
+                       Margin="10"/>
+
+                                <TextBlock Text="Blusa Feminina Preta"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           TextAlignment="Center"
+                           Margin="5"/>
+
+                                <TextBlock Text="R$ 70,00"
+                           Foreground="Green"
+                           FontWeight="Bold"
+                           FontSize="15"
+                           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/camisasocial.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                                <TextBlock Text="Camisa Social"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                                <TextBlock Text="R$ 59,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/produto calça moletom.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                                <TextBlock Text="Calça Moletom"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                                <TextBlock Text="R$ 314,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/produto jaqueta de couro.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                                <TextBlock Text="Jaqueta de Couro Preta"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                                <TextBlock Text="R$ 489,00"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/produto calça skinny.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                                <TextBlock Text="Calça Jeans Skinny"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                                <TextBlock Text="R$ 274,75"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/produto bermuda m.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                                <TextBlock Text="Bermuda Masculina"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                                <TextBlock Text="R$ 69,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+                            <StackPanel>
+
+                                <Image Source="/produto tenis.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                                <TextBlock Text="Tenis Panda Nike"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                                <TextBlock Text="R$ 400,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+                            </StackPanel>
+
+                        </Border>
+                        
+                        
+
+
                     </WrapPanel>
                 </ScrollViewer>
-            </Canvas>
-            
-            
-            <!-- CLIENTES-->
+         </Grid>
+
+                <!-- CLIENTES-->
             
             
             
