@@ -9,9 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="camisasocial.jpg" />
     <None Remove="download %281%29.jpg" />
     <None Remove="How we got back on top.jpg" />
     <None Remove="moletom-vermelho_640x640+fill_ffffff.png" />
+    <None Remove="produto bermuda m.jpg" />
+    <None Remove="produto calça moletom.jpg" />
+    <None Remove="produto calça skinny.jpg" />
+    <None Remove="produto jaqueta de couro.jpg" />
+    <None Remove="produto tenis.jpg" />
     <None Remove="Prod_6.jpg" />
   </ItemGroup>
 
@@ -21,9 +27,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="camisasocial.jpg" />
     <Resource Include="download (1).jpg" />
     <Resource Include="How we got back on top.jpg" />
     <Resource Include="moletom-vermelho_640x640+fill_ffffff.png" />
+    <Resource Include="produto bermuda m.jpg" />
+    <Resource Include="produto calça moletom.jpg" />
+    <Resource Include="produto calça skinny.jpg" />
+    <Resource Include="produto jaqueta de couro.jpg" />
+    <Resource Include="produto tenis.jpg" />
     <Resource Include="Prod_6.jpg" />
   </ItemGroup>
 

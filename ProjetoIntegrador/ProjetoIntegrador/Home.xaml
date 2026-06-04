@@ -189,12 +189,9 @@
             </Canvas>
 
             <!-- PRODUTOS-->
-                <Grid Grid.Row="1">
+            <Grid Grid.Row="1" Visibility="Collapsed">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <WrapPanel Margin="30">
-
-
-
                         <Border Width="180"
                                 Height="250"
                                 Background="White"
@@ -503,21 +500,564 @@ BorderThickness="1">
                             </StackPanel>
 
                         </Border>
-                        
-                        
+
+
 
 
                     </WrapPanel>
                 </ScrollViewer>
-         </Grid>
+            </Grid>
 
-                <!-- CLIENTES-->
-            
-            
-            
-            
-            
-            
+            <!-- CLIENTES-->
+            <Canvas Visibility="Collapsed" Grid.Row="1" Margin="10,0,0,0">
+
+                <TextBlock Text="Clientes"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Margin="0,0,0,20"/>
+
+                <StackPanel Grid.Row="1"
+                            Orientation="Horizontal"
+                            Margin="0,0,0,15">
+
+                    <TextBox Width="300"
+                 Height="35"
+                 VerticalContentAlignment="Center"
+                 Text="Pesquisar cliente..." />
+
+                    <Button Content="Pesquisar"
+                Width="120"
+                Height="35"
+                Margin="10,0,0,0"/>
+
+                    <Button Content="Novo Cliente"
+                Width="140"
+                Height="35"
+                Background="#2ECC71"
+                Foreground="White"/>
+
+                    <Button Content="Editar"
+                        Width="140"
+                        Height="35"
+                        Background="#FFCACACA"
+                        Foreground="Black"/>
+
+                    <Button Content="Excluir"
+                        Width="134"
+                        Height="35"
+                        Background="#FFFB0000"
+                        Foreground="White"/>
+                </StackPanel>
+
+                <DataGrid Grid.Row="2"
+              AutoGenerateColumns="False"
+              CanUserAddRows="False" HorizontalAlignment="Left" Canvas.Top="85" VerticalAlignment="Center" Canvas.Left="10" Width="834" Height="28">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="ID"
+                                Binding="{Binding Id}"
+                                Width="60"/>
+
+                        <DataGridTextColumn Header="Nome"
+                                Binding="{Binding Nome}"
+                                Width="250"/>
+
+                        <DataGridTextColumn Header="Telefone"
+                                Binding="{Binding Telefone}"
+                                Width="150"/>
+
+                        <DataGridTextColumn Header="CPF"
+                                Binding="{Binding CPF}"
+                                Width="150"/>
+
+                        <DataGridTextColumn Header="Cidade"
+                                Binding="{Binding Cidade}"
+                                Width="150"/>
+
+                        <DataGridTextColumn Header="Compras"
+                                Binding="{Binding TotalCompras}"
+                                Width="120"/>
+
+
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+                <Border Width="216"
+        Height="742"
+        Background="White"
+        BorderBrush="#DDD"
+        BorderThickness="1"
+        Canvas.Left="844"
+        Canvas.Top="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <StackPanel Margin="15">
+                        <TextBlock Text="Cliente Selecionado"
+                   FontSize="18"
+                   FontWeight="Bold"/>
+
+                        <TextBlock Text="Nome:"
+                   Margin="0,20,0,0"/>
+
+                        <TextBlock Text="CPF:"
+                   Margin="0,10,0,0"/>
+
+                        <TextBlock Text="Telefone:"
+                   Margin="0,10,0,0"/>
+
+                        <TextBlock Text="Cidade:"
+                   Margin="0,10,0,0"/>
+                    </StackPanel>
+
+                </Border>
+            </Canvas>
+
+            <!-- ESTOQUE-->
+            <Canvas Visibility="Collapsed" Grid.RowSpan="2">
+
+                <TextBlock Text="Controle de Estoque"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Canvas.Left="426"
+                   Canvas.Top="95" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                <!-- Pesquisa -->
+                <TextBox x:Name="txtPesquisar"
+                 Width="250"
+                 Height="30"
+                 Canvas.Left="90"
+                 Canvas.Top="165" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                <!-- Botão Pesquisar -->
+                <Button x:Name="btnPesquisar"
+                Content="Pesquisar"
+                Width="100"
+                Height="30"
+                Background="#D9D9D9"
+                Canvas.Left="365"
+                Canvas.Top="165"/>
+
+                <!-- Botão Atualizar Estoque -->
+                <Button x:Name="btnAtualizar"
+                Content="Atualizar Estoque"
+                Width="140"
+                Height="30"
+                Background="#22C55E"
+                Foreground="White"
+                FontWeight="Bold"
+                Canvas.Left="470"
+                Canvas.Top="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                <DataGrid x:Name="dgEstoque"
+                          Width="900"
+                          Height="500"
+                          Canvas.Left="90"
+                          Canvas.Top="243"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Produto"
+                                            Binding="{Binding Produto}"
+                                            Width="250"/>
+
+                        <DataGridTextColumn Header="Tamanho"
+                                            Binding="{Binding Tamanho}"
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="Cor"
+                                            Binding="{Binding Cor}"
+                                            Width="150"/>
+
+                        <DataGridTextColumn Header="Qtd. Disponível"
+                                            Binding="{Binding QuantidadeDisponivel}"
+                                            Width="150"/>
+
+                        <DataGridTextColumn Header="Status"
+                                            Binding="{Binding Status}"
+                                            Width="150"/>
+
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Canvas>
+            <Canvas Visibility="Collapsed" Grid.Row="1">
+
+                <!-- Painel Superior -->
+                <Border Width="1045"
+                Height="200"
+                Background="#22C55E"
+                CornerRadius="25"
+                Canvas.Left="25"
+                Canvas.Top="20" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                    <Canvas>
+
+                        <!-- Data -->
+                        <TextBlock Text="Data"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Canvas.Left="25"
+                           Canvas.Top="25"/>
+
+                        <DatePicker Width="220"
+                            Height="45"
+                            Canvas.Left="25"
+                            Canvas.Top="70"/>
+
+                        <!-- Produto -->
+                        <TextBlock Text="Produto"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Canvas.Left="300"
+                           Canvas.Top="25"/>
+
+                        <ComboBox Width="225"
+                          Height="45"
+                          Canvas.Left="300"
+                          Canvas.Top="70">
+
+                            <ComboBoxItem Content="Todos os Produtos"/>
+                            <ComboBoxItem Content="Camisetas"/>
+                            <ComboBoxItem Content="Calças"/>
+                            <ComboBoxItem Content="Moletons"/>
+
+                        </ComboBox>
+
+                        <!-- Categoria -->
+                        <TextBlock Text="Categoria"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Canvas.Left="580"
+                           Canvas.Top="25"/>
+
+                        <ComboBox Width="193"
+                          Height="45"
+                          Canvas.Left="580"
+                          Canvas.Top="70" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                            <ComboBoxItem Content="Roupas"/>
+                            <ComboBoxItem Content="Masculino"/>
+                            <ComboBoxItem Content="Feminino"/>
+
+                        </ComboBox>
+
+                        <!-- Cliente -->
+                        <TextBlock Text="Cliente"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Canvas.Left="828"
+                           Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <ComboBox Width="207"
+                          Height="45"
+                          Canvas.Left="828"
+                          Canvas.Top="70" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                            <ComboBoxItem Content="Todos"/>
+                            <ComboBoxItem Content="Eduarda"/>
+                            <ComboBoxItem Content="Maria"/>
+
+                        </ComboBox>
+
+                    </Canvas>
+
+                </Border>
+
+                <!-- Card Total de Vendas -->
+                <Border Width="298"
+                Height="200"
+                Background="White"
+                CornerRadius="20"
+                Canvas.Left="45"
+                Canvas.Top="330" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                    <Canvas>
+
+                        <Border Width="258"
+                        Height="40"
+                        Background="#22C55E"
+                        CornerRadius="20"
+                        Canvas.Left="25"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="TOTAL DE VENDAS"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Canvas.Left="75"
+                           Canvas.Top="23" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                        <TextBlock x:Name="txtTotalVendas"
+                           Text="R$ 0,00"
+                           FontSize="40"
+                           FontWeight="Bold"
+                           Canvas.Left="80"
+                           Canvas.Top="90"/>
+
+                    </Canvas>
+
+                </Border>
+
+                <!-- Card Produto Mais Vendido -->
+                <Border Width="298"
+                Height="200"
+                Background="White"
+                CornerRadius="20"
+                Canvas.Left="391"
+                Canvas.Top="330" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <Canvas>
+
+                        <Border Width="263"
+                        Height="40"
+                        Background="#22C55E"
+                        CornerRadius="20"
+                        Canvas.Left="25"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="PRODUTO MAIS VENDIDO"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Canvas.Left="37"
+                           Canvas.Top="23"/>
+
+                        <TextBlock x:Name="txtMaisVendido"
+                           Text="Camiseta"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Canvas.Left="80"
+                           Canvas.Top="90"/>
+
+                    </Canvas>
+
+                </Border>
+
+                <!-- Card Quantidade Vendida -->
+                <Border Width="298"
+                Height="200"
+                Background="White"
+                CornerRadius="20"
+                Canvas.Left="731"
+                Canvas.Top="330" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                    <Canvas>
+
+                        <Border Width="246"
+                        Height="40"
+                        Background="#22C55E"
+                        CornerRadius="20"
+                        Canvas.Left="25"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="QUANTIDADE VENDIDA"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Canvas.Left="47"
+                           Canvas.Top="23"/>
+
+                        <TextBlock x:Name="txtQuantidade"
+                           Text="0"
+                           FontSize="40"
+                           FontWeight="Bold"
+                           Canvas.Left="135"
+                           Canvas.Top="73" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                    </Canvas>
+                </Border>
+            </Canvas>
+
+            <Canvas Grid.Row="1">
+
+                <!-- Painel de filtros -->
+                <Border Width="1024"
+                                Height="140"
+                                Background="#22C55E"
+                                CornerRadius="25"
+                                Canvas.Left="25"
+                                Canvas.Top="20" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                    <Canvas>
+
+                        <TextBlock Text="Período"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   Canvas.Left="30"
+                                   Canvas.Top="20"/>
+
+                        <DatePicker Width="220"
+                                    Height="40"
+                                    Canvas.Left="30"
+                                    Canvas.Top="60"/>
+
+                        <TextBlock Text="Movimentação"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   Canvas.Left="320"
+                                   Canvas.Top="20"/>
+
+                        <ComboBox Width="220"
+                                    Height="40"
+                                    Canvas.Left="320"
+                                    Canvas.Top="60">
+
+                            <ComboBoxItem Content="Todas"/>
+                            <ComboBoxItem Content="Entradas"/>
+                            <ComboBoxItem Content="Saídas"/>
+
+                        </ComboBox>
+
+                        <Button Content="Pesquisar"
+                                Width="150"
+                                Height="40"
+                                Background="White"
+                                Canvas.Left="580"
+                                Canvas.Top="60"/>
+
+                    </Canvas>
+
+                </Border>
+
+                <!-- Entradas-->
+
+                <Border Width="268"
+                        Height="180"
+                        Background="White"
+                        CornerRadius="20"
+                        Canvas.Left="25"
+                        Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                    <Canvas>
+
+                        <Border Width="233"
+                                Height="40"
+                                Background="#22C55E"
+                                CornerRadius="20"
+                                Canvas.Left="25"
+                                Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="ENTRADAS"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Canvas.Left="89"
+                                   Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="R$ 0,00"
+                                   FontSize="36"
+                                   FontWeight="Bold"
+                                   Canvas.Left="71"
+                                   Canvas.Top="90" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    </Canvas>
+                </Border>
+
+                <!-- Saídas -->
+                <Border Width="260"
+                Height="180"
+                Background="White"
+                CornerRadius="20"
+                Canvas.Left="407"
+                Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                    <Canvas>
+
+                        <Border Width="207"
+                        Height="40"
+                        Background="#FF6B6B"
+                        CornerRadius="20"
+                        Canvas.Left="25"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="SAÍDAS"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Canvas.Left="94"
+                           Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="R$ 0,00"
+                           FontSize="36"
+                           FontWeight="Bold"
+                           Canvas.Left="67"
+                           Canvas.Top="90" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    </Canvas>
+
+                </Border>
+
+                <!-- Lucro -->
+                <Border Width="245"
+                Height="180"
+                Background="White"
+                CornerRadius="20"
+                Canvas.Left="747"
+                Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                    <Canvas>
+
+                        <Border Width="192"
+                        Height="40"
+                        Background="#00C45F"
+                        CornerRadius="20"
+                        Canvas.Left="25"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="LUCRO"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Canvas.Left="90"
+                           Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="R$ 0,00"
+                           FontSize="36"
+                           FontWeight="Bold"
+                           Canvas.Left="67"
+                           Canvas.Top="90" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    </Canvas>
+
+                </Border>
+
+                <!-- Tabela -->
+                <DataGrid Width="1024"
+                  Height="250"
+                  Canvas.Left="25"
+                  Canvas.Top="420"
+                  AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Data"
+                                    Binding="{Binding Data}"
+                                    Width="150"/>
+
+                        <DataGridTextColumn Header="Descrição"
+                                    Binding="{Binding Descricao}"
+                                    Width="350"/>
+
+                        <DataGridTextColumn Header="Tipo"
+                                    Binding="{Binding Tipo}"
+                                    Width="150"/>
+
+                        <DataGridTextColumn Header="Valor"
+                                    Binding="{Binding Valor}"
+                                    Width="150"/>
+
+                        <DataGridTextColumn Header="Forma Pagamento"
+                                    Binding="{Binding Pagamento}"
+                                    Width="250"/>
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+
+
+            </Canvas>
+
         </Grid>
     </Grid>
 </Page>
