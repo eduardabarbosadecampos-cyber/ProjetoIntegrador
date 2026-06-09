@@ -70,10 +70,6 @@
                     <Button x:Name="BtnFinanceiro" Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
                     <Button x:Name="BtnConfiguracoes" Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
 
-
-
-
-
                     <!-- ITEM -->
                 </StackPanel>
                 <!-- Encerrar sistema -->
@@ -189,9 +185,9 @@
             </Canvas>
 
             <!-- PRODUTOS-->
-            <Canvas x:Name="MenuProdutos" Grid.Row="1" Visibility="Collapsed">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <WrapPanel Margin="30">
+            <Canvas x:Name="MenuProdutos" Visibility="Visible" Grid.Row="1">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1055" Height="740" Canvas.Top="10" Canvas.Left="10">
+                    <WrapPanel Margin="20">
                         <Border Width="180"
                                 Height="250"
                                 Background="White"
@@ -687,7 +683,7 @@ BorderThickness="1">
 
             </Canvas>
 
-            
+
             <Canvas x:Name="MenuRelatorios" Visibility="Collapsed" Grid.Row="1">
 
                 <!-- Painel Superior -->
