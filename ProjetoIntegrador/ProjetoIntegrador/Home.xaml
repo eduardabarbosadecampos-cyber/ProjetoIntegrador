@@ -62,13 +62,13 @@
                          Margin="10,10">
 
                     <!-- BOTÃO -->
-                    <Button x:Name="BtnVendas" Content="🛒 Vendas" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
-                    <Button x:Name="BtnProdutos" Content="📦 Produtos" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
-                    <Button x:Name="BtnClientes" Content="👥 Clientes" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
-                    <Button x:Name="BtnEstoque" Content="🚚 Estoque" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
-                    <Button x:Name="BtnRelatorios" Content="📊 Relatórios" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
-                    <Button x:Name="BtnFinanceiro" Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
-                    <Button x:Name="BtnConfiguracoes" Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="OpenMenu"/>
+                    <Button x:Name="BtnVendas" Content="🛒 Vendas" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
+                    <Button x:Name="BtnProdutos" Content="📦 Produtos" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
+                    <Button x:Name="BtnClientes" Content="👥 Clientes" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
+                    <Button x:Name="BtnEstoque" Content="🚚 Estoque" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
+                    <Button x:Name="BtnRelatorios" Content="📊 Relatórios" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
+                    <Button x:Name="BtnFinanceiro" Content="💲 Financeiro" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
+                    <Button x:Name="BtnConfiguracoes" Content="⚙️ Configurações" FontSize="30" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" Click="ShowMenu"/>
 
 
 
@@ -77,7 +77,7 @@
                     <!-- ITEM -->
                 </StackPanel>
                 <!-- Encerrar sistema -->
-                <Button Margin="0,670,0,0" Grid.Row="1" Grid.RowSpan="2" Background="Red" Click="Exit_Sistema_Click">
+                <Button Margin="0,670,0,0" Grid.Row="1" Grid.RowSpan="2" Background="Red" Click="FecharSistema">
 
                     <StackPanel Orientation="Horizontal"
                              VerticalAlignment="Center"
@@ -147,7 +147,7 @@
             </Border>
 
             <!-- VENDAS -->
-            <Canvas Visibility="Collapsed" Background="White" Grid.Row="1" Height="760" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1080">
+            <Canvas x:Name="MenuVendas" Visibility="Collapsed" Background="White" Grid.Row="1" Height="760" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1080">
                 <Label Content="Cliente" Canvas.Left="77" Canvas.Top="16" Height="57" Width="110" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Rectangle Height="1" Stroke="Black" Canvas.Top="92" Width="1080" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBox Canvas.Left="192" TextWrapping="Wrap" Text="Buscar Cliente" Canvas.Top="24" Width="204" Height="42" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25"/>
@@ -189,7 +189,7 @@
             </Canvas>
 
             <!-- PRODUTOS-->
-            <Grid Grid.Row="1" Visibility="Collapsed">
+            <Canvas x:Name="MenuProdutos" Grid.Row="1" Visibility="Collapsed">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <WrapPanel Margin="30">
                         <Border Width="180"
@@ -506,10 +506,10 @@ BorderThickness="1">
 
                     </WrapPanel>
                 </ScrollViewer>
-            </Grid>
+            </Canvas>
 
             <!-- CLIENTES-->
-            <Canvas Visibility="Collapsed" Grid.Row="1" Margin="10,0,0,0">
+            <Canvas x:Name="MenuClientes" Visibility="Collapsed" Grid.Row="1" Margin="10,0,0,0">
 
                 <TextBlock Text="Clientes"
                            FontSize="24"
@@ -615,7 +615,7 @@ BorderThickness="1">
             </Canvas>
 
             <!-- ESTOQUE-->
-            <Canvas Visibility="Collapsed" Grid.RowSpan="2">
+            <Canvas x:Name="MenuEstoque" Visibility="Collapsed" Grid.RowSpan="2">
 
                 <TextBlock Text="Controle de Estoque"
                    FontSize="24"
@@ -686,7 +686,9 @@ BorderThickness="1">
                 </DataGrid>
 
             </Canvas>
-            <Canvas Visibility="Collapsed" Grid.Row="1">
+
+            
+            <Canvas x:Name="MenuRelatorios" Visibility="Collapsed" Grid.Row="1">
 
                 <!-- Painel Superior -->
                 <Border Width="1045"
@@ -871,7 +873,8 @@ BorderThickness="1">
                 </Border>
             </Canvas>
 
-            <Canvas Grid.Row="1">
+            <!-- Financeiro -->
+            <Canvas Visibility="Collapsed" Grid.Row="1">
 
                 <!-- Painel de filtros -->
                 <Border Width="1024"
