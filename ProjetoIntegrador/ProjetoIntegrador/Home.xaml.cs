@@ -82,9 +82,21 @@ namespace ProjetoIntegrador
                     Ctrl.Content = new PageClientes();
                     break;
 
-                    //case "BtnEstoque":
-                    //    MenuEstoque.Visibility = Visibility.Visible;
-                    //    break;
+                case "BtnEstoque":
+                    Ctrl.Content = new PageEstoque();
+                    break;
+
+                case "BtnRelatorios":
+                    Ctrl.Content = new PageRelatórios();
+                    break;
+
+                case "BtnFinanceiro":
+                    Ctrl.Content = new PageFinanceiro();
+                    break;
+
+                case "BtnConfiguracoes":
+                    Ctrl.Content = new PageConfigurações();
+                    break;
             }
         }
 

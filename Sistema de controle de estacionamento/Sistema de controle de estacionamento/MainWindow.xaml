@@ -1,0 +1,70 @@
+﻿<Window x:Class="Sistema_de_controle_de_estacionamento.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistema_de_controle_de_estacionamento"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Sistema de Estacionamento"
+                     FontSize="26"
+                     FontWeight="Bold"
+                     HorizontalAlignment="Center"
+                     Margin="10" />
+
+        <StackPanel Grid.Row="1">
+            <GroupBox Header="Cadastro" Margin="0,0,0,10" >
+
+                <StackPanel Margin="10">
+
+                    <Label Content="Placa"/>
+                    <TextBox x:Name="txtPlaca"/>
+
+                    <Label Content="Modelo"/>
+                    <TextBox x:Name="txtModelo"/>
+
+                    <Label Content="Cor"/>
+                    <TextBox x:Name="txtCor"/>
+
+
+                    <WrapPanel Margin="0,10,0,0">
+                        <Button Content="Registrar Entrada" x:Name="btnEntrada" Width="150" Height="35" Margin="5" Click="btnEntrada_Click"/>
+
+                        <Button Content="Registrar Saída" x:Name="btnSaida" Width="150" Height="35" Margin="5" Click="btnSaida_Click"/>
+
+                        <Button Content="Relatório" x:Name="btnRelatório" Width="150" Height="35" Margin="5" Click="btnRelatório_Click"/>
+                    </WrapPanel>
+                </StackPanel>
+            </GroupBox>
+         </StackPanel>
+        
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="txtTotal" FontSize="18" FontWeight="Bold" Margin="0,10"/>
+
+            <DataGrid Grid.Row="1" x:Name="dataGridVeiculos" AutoGenerateColumns="False" Margin="0,10,0,0">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Placa" Binding="{Binding Placa}"/>
+                    <DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}"/>
+                    <DataGridTextColumn Header="Cor" Binding="{Binding Cor}"/>
+                    <DataGridTextColumn Header="Entrada" Binding="{Binding Entrada}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

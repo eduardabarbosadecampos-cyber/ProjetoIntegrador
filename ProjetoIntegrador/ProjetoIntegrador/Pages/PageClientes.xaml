@@ -20,24 +20,23 @@
 
         <Label Content="Clientes" Grid.Row="0" FontSize="24" FontWeight="Bold" />
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBox Width="300" Height="35" Text="Pesquisar cliente..." />
+            <TextBox Width="300" Height="35" Text="Pesquisar cliente..." Margin="20"/>
 
             <Button Content="Pesquisar"
         Width="120"
-        Height="35"
-        Margin="10,0,0,0"/>
+        Height="35"/>
 
             <Button Content="Novo Cliente"
         Width="140"
         Height="35"
         Background="#2ECC71"
-        Foreground="White"/>
+        Foreground="White" Margin="10"/>
 
             <Button Content="Editar"
                 Width="140"
                 Height="35"
                 Background="#FFCACACA"
-                Foreground="Black"/>
+                Foreground="Black" Margin="10"/>
 
             <Button Content="Excluir"
                 Width="134"
@@ -48,10 +47,9 @@
 
         <DataGrid Grid.Row="2"
       AutoGenerateColumns="False"
-      CanUserAddRows="False" HorizontalAlignment="Left" Canvas.Top="85" VerticalAlignment="Center" Canvas.Left="10" Width="834" Height="28">
+      CanUserAddRows="False" HorizontalAlignment="Left" Canvas.Top="85" VerticalAlignment="Center" Canvas.Left="10" Width="834" Height="28" Margin="20,0">
 
             <DataGrid.Columns>
-
                 <DataGridTextColumn Header="ID"
                         Binding="{Binding Id}"
                         Width="60"/>

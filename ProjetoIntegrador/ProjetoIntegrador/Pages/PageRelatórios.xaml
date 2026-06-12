@@ -1,0 +1,226 @@
+﻿<UserControl x:Class="ProjetoIntegrador.Pages.PageRelatórios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjetoIntegrador.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+        <Canvas x:Name="MenuRelatorios" Grid.Row="1">
+
+
+            <!--Painel Superior-->
+
+            <Border Width="688"
+                Height="98"
+                Background="#22C55E"
+                CornerRadius="25"
+                Canvas.Left="45"
+                Canvas.Top="26" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <Canvas>
+
+
+                    <!--Data-->
+
+                    <TextBlock Text="Data"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Canvas.Left="25"
+                           Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="59"/>
+
+                    <DatePicker Width="151"
+                            Height="28"
+                            Canvas.Left="25"
+                            Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+
+                    <!--Produto-->
+
+                    <TextBlock Text="Produto"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Canvas.Left="193"
+                           Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <ComboBox Width="151"
+                          Height="23"
+                          Canvas.Left="193"
+                          Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.438,0.52">
+
+                        <ComboBoxItem Content="Todos os Produtos"/>
+                        <ComboBoxItem Content="Camisetas"/>
+                        <ComboBoxItem Content="Calças"/>
+                        <ComboBoxItem Content="Moletons"/>
+
+                    </ComboBox>
+
+
+                    <!--Categoria-->
+
+                    <TextBlock Text="Categoria"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Canvas.Left="360"
+                           Canvas.Top="8" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <ComboBox Width="151"
+                          Height="21"
+                          Canvas.Left="360"
+                          Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.363,2.323">
+
+                        <ComboBoxItem Content="Roupas"/>
+                        <ComboBoxItem Content="Masculino"/>
+                        <ComboBoxItem Content="Feminino"/>
+
+                    </ComboBox>
+
+
+                    <!--Cliente-->
+
+                    <TextBlock Text="Cliente"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Canvas.Left="527"
+                           Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <ComboBox Width="151"
+                          Height="21"
+                          Canvas.Left="527"
+                          Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                        <ComboBoxItem Content="Todos"/>
+                        <ComboBoxItem Content="Eduarda"/>
+                        <ComboBoxItem Content="Maria"/>
+
+                    </ComboBox>
+
+                </Canvas>
+
+            </Border>
+
+
+            <!--Card Total de Vendas-->
+
+            <Border Width="248"
+                Height="163"
+                CornerRadius="20"
+                Canvas.Left="276"
+                Canvas.Top="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC6F7D6"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Canvas>
+
+                    <Border Width="227"
+                        Height="40"
+                        Background="#22C55E"
+                        CornerRadius="20"
+                        Canvas.Left="10"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="TOTAL DE VENDAS"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Canvas.Left="44"
+                           Canvas.Top="23" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <TextBlock x:Name="txtTotalVendas"
+                           Text="R$ 0,00"
+                           FontSize="40"
+                           FontWeight="Bold"
+                           Canvas.Left="53"
+                           Canvas.Top="82" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                </Canvas>
+
+            </Border>
+
+
+            <!--Card Produto Mais Vendido-->
+
+            <Border Width="247"
+                Height="163"
+                CornerRadius="20"
+                Canvas.Left="543"
+                Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC6F7D6"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Canvas>
+
+                    <Border Width="227"
+                        Height="40"
+                        Background="#22C55E"
+                        CornerRadius="20"
+                        Canvas.Left="10"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="PRODUTO MAIS VENDIDO"
+                           FontSize="17"
+                           FontWeight="Bold"
+                           Canvas.Left="18"
+                           Canvas.Top="24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <TextBlock x:Name="txtMaisVendido"
+                           Text="Camiseta"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Canvas.Left="64"
+                           Canvas.Top="82" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                </Canvas>
+
+            </Border>
+
+
+            <!--Card Quantidade Vendida-->
+
+            <Border Width="247"
+                Height="163"
+                CornerRadius="20"
+                Canvas.Left="10"
+                Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC6F7D6"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Canvas>
+
+                    <Border Width="227"
+                        Height="40"
+                        Background="#22C55E"
+                        CornerRadius="20"
+                        Canvas.Left="10"
+                        Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="QUANTIDADE VENDIDA"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Canvas.Left="22"
+                           Canvas.Top="23" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <TextBlock x:Name="txtQuantidade"
+                           Text="0"
+                           FontSize="40"
+                           FontWeight="Bold"
+                           Canvas.Left="112"
+                           Canvas.Top="73" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                </Canvas>
+            </Border>
+        </Canvas>
+    </Grid>
+</UserControl>
