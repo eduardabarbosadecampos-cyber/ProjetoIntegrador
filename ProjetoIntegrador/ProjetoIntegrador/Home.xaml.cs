@@ -1,4 +1,5 @@
 ﻿using Mysqlx.Connection;
+using ProjetoIntegrador.Pages;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,6 +26,7 @@ namespace ProjetoIntegrador
         public Home()
         {
             InitializeComponent();
+            Ctrl.Content = new PageVendas();
 
             MenuButtons = new()
         {
@@ -36,16 +38,6 @@ namespace ProjetoIntegrador
             BtnFinanceiro,
             BtnConfiguracoes
         };
-
-            Menus = new()
-        {
-            MenuVendas,
-            MenuProdutos,
-            MenuClientes,
-            MenuEstoque,
-            MenuRelatorios
-        };
-
             RefreshMenus(BtnVendas);
         }
 
@@ -79,20 +71,20 @@ namespace ProjetoIntegrador
             switch (btn.Name)
             {
                 case "BtnVendas":
-                    MenuVendas.Visibility = Visibility.Visible;
+                    Ctrl.Content = new PageVendas();
                     break;
 
                 case "BtnProdutos":
-                    MenuProdutos.Visibility = Visibility.Visible;
+                    Ctrl.Content = new PageProdutos();
                     break;
 
                 case "BtnClientes":
-                    MenuClientes.Visibility = Visibility.Visible;
+                    Ctrl.Content = new PageClientes();
                     break;
 
-                case "BtnEstoque":
-                    MenuEstoque.Visibility = Visibility.Visible;
-                    break;
+                    //case "BtnEstoque":
+                    //    MenuEstoque.Visibility = Visibility.Visible;
+                    //    break;
             }
         }
 

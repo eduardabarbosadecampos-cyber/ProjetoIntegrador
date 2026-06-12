@@ -1,0 +1,307 @@
+﻿<UserControl x:Class="ProjetoIntegrador.Pages.PageProdutos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjetoIntegrador.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1400">
+
+    <WrapPanel Margin="20">
+        <Border Width="180" Height="250" Background="White" CornerRadius="10" Margin="10" BorderBrush="#DDD" BorderThickness="1">
+            <StackPanel>
+                <!--IMAGEM-->
+                <Image Height="150" Margin="10" Source="/download (1).jpg"/>
+
+                <!--NOME-->
+                <TextBlock Text="Swater de Tricot Listrado" FontWeight="Bold" FontSize="14" Margin="5" TextWrapping="Wrap" TextAlignment="Center"/>
+
+                <!--PREÇO-->
+                <TextBlock Text="R$ 200,50" FontSize="15" Foreground="Green" FontWeight="Bold" TextAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <Border Width="180"
+                Height="250"
+                Background="White"
+                CornerRadius="10"
+                Margin="10"
+                BorderBrush="#DDD"
+                BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/How we got back on top.jpg"
+                       Height="150"
+                       Stretch="Uniform"
+                       Margin="10"/>
+
+                <TextBlock Text="All Star Cano Alto Preto"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           TextAlignment="Center"
+                           Margin="5"/>
+
+                <TextBlock Text="R$ 279,00"
+                           Foreground="Green"
+                           FontWeight="Bold"
+                           FontSize="15"
+                           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+                Height="250"
+                Background="White"
+                CornerRadius="10"
+                Margin="10"
+                BorderBrush="#DDD"
+                BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/moletom-vermelho_640x640+fill_ffffff.png"
+                       Height="150"
+                       Stretch="Uniform"
+                       Margin="10"/>
+
+                <TextBlock Text="Moletom Vermelho"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           TextAlignment="Center"
+                           Margin="5"/>
+
+                <TextBlock Text="R$ 100,90"
+                           Foreground="Green"
+                           FontWeight="Bold"
+                           FontSize="15"
+                           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+                Height="250"
+                Background="White"
+                CornerRadius="10"
+                Margin="10"
+                BorderBrush="#DDD"
+                BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/Prod_6.jpg"
+                       Height="150"
+                       Stretch="Uniform"
+                       Margin="10"/>
+
+                <TextBlock Text="Blusa Feminina Preta"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           TextAlignment="Center"
+                           Margin="5"/>
+
+                <TextBlock Text="R$ 70,00"
+                           Foreground="Green"
+                           FontWeight="Bold"
+                           FontSize="15"
+                           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/camisasocial.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                <TextBlock Text="Camisa Social"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                <TextBlock Text="R$ 59,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/produto calça moletom.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                <TextBlock Text="Calça Moletom"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                <TextBlock Text="R$ 314,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/produto jaqueta de couro.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                <TextBlock Text="Jaqueta de Couro Preta"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                <TextBlock Text="R$ 489,00"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/produto calça skinny.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                <TextBlock Text="Calça Jeans Skinny"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                <TextBlock Text="R$ 274,75"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/produto bermuda m.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                <TextBlock Text="Bermuda Masculina"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                <TextBlock Text="R$ 69,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Width="180"
+Height="250"
+Background="White"
+CornerRadius="10"
+Margin="10"
+BorderBrush="#DDD"
+BorderThickness="1">
+
+            <StackPanel>
+
+                <Image Source="/produto tenis.jpg"
+       Height="150"
+       Stretch="Uniform"
+       Margin="10"/>
+
+                <TextBlock Text="Tenis Panda Nike"
+           FontWeight="Bold"
+           FontSize="14"
+           TextAlignment="Center"
+           Margin="5"/>
+
+                <TextBlock Text="R$ 400,99"
+           Foreground="Green"
+           FontWeight="Bold"
+           FontSize="15"
+           TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+
+
+
+    </WrapPanel>
+</UserControl>
