@@ -18,13 +18,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Clientes" Grid.Row="0" FontSize="24" FontWeight="Bold" />
+        <Label Content="Clientes" Grid.Row="0" FontSize="24" FontWeight="Bold" Margin="10" />
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBox Width="300" Height="35" Text="Pesquisar cliente..." Margin="20"/>
 
             <Button Content="Pesquisar"
         Width="120"
-        Height="35"/>
+        Height="35" Margin="10"/>
 
             <Button Content="Novo Cliente"
         Width="140"
@@ -42,12 +42,12 @@
                 Width="134"
                 Height="35"
                 Background="#FFFB0000"
-                Foreground="White"/>
+                Foreground="White" Margin="10"/>
         </StackPanel>
 
-        <DataGrid Grid.Row="2"
+        <DataGrid Grid.Row="1"
       AutoGenerateColumns="False"
-      CanUserAddRows="False" HorizontalAlignment="Left" Canvas.Top="85" VerticalAlignment="Center" Canvas.Left="10" Width="834" Height="28" Margin="20,0">
+      CanUserAddRows="False" HorizontalAlignment="Left" Canvas.Top="85" VerticalAlignment="Center" Canvas.Left="10" Width="868" Height="28" Margin="20,0,0,0">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"
@@ -80,7 +80,7 @@
 
         </DataGrid>
 
-        <Border Grid.Column="1" Width="216" Background="White" BorderBrush="#DDD" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Border Grid.Column="1" Width="216" Background="White" BorderBrush="#DDD" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
 
             <StackPanel Margin="15">
                 <TextBlock Text="Cliente Selecionado"
