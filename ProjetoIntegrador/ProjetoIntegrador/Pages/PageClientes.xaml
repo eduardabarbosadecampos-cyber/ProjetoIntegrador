@@ -47,7 +47,7 @@
 
         <DataGrid Grid.Row="1"
       AutoGenerateColumns="False"
-      CanUserAddRows="False" HorizontalAlignment="Left" Canvas.Top="85" VerticalAlignment="Center" Canvas.Left="10" Width="868" Height="28" Margin="20,0,0,0">
+      CanUserAddRows="False" Canvas.Top="85" VerticalAlignment="Top" Canvas.Left="10" Height="644" Margin="20,0,23,0">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"

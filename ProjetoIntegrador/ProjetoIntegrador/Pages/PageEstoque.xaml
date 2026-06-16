@@ -49,11 +49,11 @@
                 Canvas.Top="69" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
             <DataGrid x:Name="dgEstoque"
-                          Width="800"
-                          Height="294"
-                          Canvas.Top="156"
+                          Width="757"
+                          Height="312"
+                          Canvas.Top="118"
                           AutoGenerateColumns="False"
-                          CanUserAddRows="False" HorizontalAlignment="Left" VerticalAlignment="Center">
+                          CanUserAddRows="False" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="20">
 
                 <DataGrid.Columns>
 
