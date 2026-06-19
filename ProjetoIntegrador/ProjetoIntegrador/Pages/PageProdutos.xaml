@@ -14,7 +14,7 @@
                 <Image Height="150" Margin="10" Source="/download (1).jpg"/>
 
                 <!--NOME-->
-                <TextBlock Text="Swater de Tricot Listrado" FontWeight="Bold" FontSize="14" Margin="5" TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBlock Text="Suéter de Tricô Listrado" FontWeight="Bold" FontSize="14" Margin="5" TextWrapping="Wrap" TextAlignment="Center"/>
 
                 <!--PREÇO-->
                 <TextBlock Text="R$ 200,50" FontSize="15" Foreground="Green" FontWeight="Bold" TextAlignment="Center"/>

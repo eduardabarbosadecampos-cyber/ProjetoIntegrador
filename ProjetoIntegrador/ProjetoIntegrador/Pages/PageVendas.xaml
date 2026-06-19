@@ -14,19 +14,9 @@
             <TextBox Canvas.Left="192" TextWrapping="Wrap" Text="Buscar Cliente" Canvas.Top="24" Width="204" Height="42" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25"/>
         </WrapPanel>
 
-        <Canvas Grid.Row="2" x:Name="MenuVendas" Background="White">
+        <Canvas x:Name="MenuVendas" Background="White">
             <Label Content="Cliente" Canvas.Left="77" Canvas.Top="16" Height="57" Width="110" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBox Canvas.Left="192" TextWrapping="Wrap" Text="Buscar Cliente" Canvas.Top="24" Width="204" Height="42" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25"/>
-            <Rectangle Height="1" Stroke="Black" Canvas.Top="92" Width="1355" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="0.204"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
             <Label Content="Produto" Canvas.Left="116" Canvas.Top="129" Height="57" Width="120" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Label Content="Quantidade" Canvas.Left="69" Canvas.Top="186" Height="57" Width="169" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label Content="Desconto" Canvas.Left="92" Canvas.Top="241" Height="57" Width="144" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -45,18 +35,7 @@
             <Button Content="Remover item" Canvas.Left="618" Canvas.Top="320" Height="40" Width="200" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFBEBE"/>
             <Label Content="+" Canvas.Left="102" Canvas.Top="313" Height="57" Width="30" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="2.796,0.488"/>
             <Label Content="-" Canvas.Left="591" Canvas.Top="313" Height="40" Width="22" FontSize="30" RenderTransformOrigin="2.796,0.488" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Rectangle Height="1" Stroke="Black" Canvas.Top="398" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Content="Itens no carrinho:" Canvas.Left="116" Canvas.Top="413" Height="57" Width="242" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Rectangle Height="1" Stroke="Black" Canvas.Top="486" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="-1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
             <Label Content="Forma de Pagamento" Canvas.Left="98" Canvas.Top="508" Height="58" Width="294" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBox Canvas.Left="409" TextWrapping="Wrap" Text="" Canvas.Top="516" Width="204" Height="42" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Label Content="Total Geral" Canvas.Left="237" Canvas.Top="566" Height="57" Width="154" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
