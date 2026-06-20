@@ -22,5 +22,15 @@ namespace ProjetoIntegrador.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnSelecionarImagem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
