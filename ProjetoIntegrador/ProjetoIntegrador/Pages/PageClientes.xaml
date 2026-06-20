@@ -14,12 +14,12 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto" MinWidth="969"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Clientes" Grid.Row="0" FontSize="24" FontWeight="Bold" Margin="10" />
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <Label Content="" Grid.Row="0" FontSize="24" FontWeight="Bold" Margin="10,10,10,10" />
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,2,0">
             <TextBox Width="300" Height="35" Text="Pesquisar cliente..." Margin="20"/>
 
             <Button Content="Pesquisar"
@@ -47,7 +47,7 @@
 
         <DataGrid Grid.Row="1"
       AutoGenerateColumns="False"
-      CanUserAddRows="False" Canvas.Top="85" VerticalAlignment="Top" Canvas.Left="10" Height="644" Margin="20,0,23,0">
+      CanUserAddRows="False" Canvas.Top="85" VerticalAlignment="Center" Canvas.Left="10" Height="644" Margin="20,0,23,0">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"
@@ -79,27 +79,5 @@
             </DataGrid.Columns>
 
         </DataGrid>
-
-        <Border Grid.Column="1" Width="216" Background="White" BorderBrush="#DDD" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-
-            <StackPanel Margin="15">
-                <TextBlock Text="Cliente Selecionado"
-           FontSize="18"
-           FontWeight="Bold"/>
-
-                <TextBlock Text="Nome:"
-           Margin="0,20,0,0"/>
-
-                <TextBlock Text="CPF:"
-           Margin="0,10,0,0"/>
-
-                <TextBlock Text="Telefone:"
-           Margin="0,10,0,0"/>
-
-                <TextBlock Text="Cidade:"
-           Margin="0,10,0,0"/>
-            </StackPanel>
-
-        </Border>
     </Grid>
 </UserControl>

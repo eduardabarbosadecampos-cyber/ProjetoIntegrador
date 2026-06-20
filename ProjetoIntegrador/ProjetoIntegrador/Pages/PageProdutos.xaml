@@ -16,6 +16,7 @@
             <Label Content="Código:"/>
             <TextBox x:Name="tbCodigoProd" Width="100"/>
 
+
             <Label Content="Descrição:"/>
             <TextBox x:Name="tbDescricao" Width="200"/>
 
