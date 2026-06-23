@@ -31,6 +31,63 @@ namespace ProjetoIntegrador.Pages
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
 
+            gridProdutos.Children.Add(CriarCardProduto("/produto tenis.jpg", Convert.ToInt32(tbCodigoProd.Text), tbProduto.Text, Convert.ToDecimal(tbPreco.Text)));
+
+        }
+
+        private Border CriarCardProduto(string imagem, int codigo, string nome, decimal preco)
+        {
+            Border border = new Border
+            {
+                Width = 180,
+                Height = 250,
+                Background = Brushes.White,
+                CornerRadius = new CornerRadius(10),
+                Margin = new Thickness(10),
+                BorderBrush = Brushes.LightGray,
+                BorderThickness = new Thickness(1)
+            };
+
+            StackPanel stack = new StackPanel();
+
+            stack.Children.Add(new Image
+            {
+                Height = 150,
+                Stretch = Stretch.Uniform,
+                Margin = new Thickness(10),
+                Source = new BitmapImage(new Uri(imagem, UriKind.Relative))
+            });
+
+            stack.Children.Add(new TextBlock
+            {
+                Text = $"#{codigo.ToString()}",
+                FontWeight = FontWeights.Bold,
+                FontSize = 14,
+                TextAlignment = TextAlignment.Center,
+                Margin = new Thickness(5)
+            });
+
+            stack.Children.Add(new TextBlock
+            {
+                Text = nome,
+                FontWeight = FontWeights.Bold,
+                FontSize = 14,
+                TextAlignment = TextAlignment.Center,
+                Margin = new Thickness(5)
+            });
+
+            stack.Children.Add(new TextBlock
+            {
+                Text = preco.ToString("C"),
+                Foreground = Brushes.Green,
+                FontWeight = FontWeights.Bold,
+                FontSize = 15,
+                TextAlignment = TextAlignment.Center
+            });
+
+            border.Child = stack;
+
+            return border;
         }
     }
 }
