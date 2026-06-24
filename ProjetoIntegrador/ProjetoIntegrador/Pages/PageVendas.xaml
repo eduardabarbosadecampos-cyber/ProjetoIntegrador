@@ -41,6 +41,7 @@
             <Label Content="Total Geral" Canvas.Left="237" Canvas.Top="566" Height="57" Width="154" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Content="❌ Cancelar" Canvas.Left="137" Canvas.Top="660" Height="54" Width="200" FontSize="25" Background="#FF22C55E" RenderTransformOrigin="0.525,0.3" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
             <Button Content="✔ Finalizar Venda" Canvas.Left="706" Canvas.Top="662" Height="54" Width="253" FontSize="25" Background="#FF22C55E" RenderTransformOrigin="0.514,0.538" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource BotaoArredondado}" />
+            <Label Content="" Canvas.Left="409" Canvas.Top="571" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="99"/>
         </Canvas>
     </Grid>
 

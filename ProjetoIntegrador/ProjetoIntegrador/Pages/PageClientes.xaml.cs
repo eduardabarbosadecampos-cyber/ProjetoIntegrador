@@ -22,5 +22,18 @@ namespace ProjetoIntegrador.Pages
         {
             InitializeComponent();
         }
+
+        private void AddCliente(object sender, RoutedEventArgs e)
+        {
+            var cliente = new Clientes();
+            cliente.Nome = "Luciano";
+
+            dgClientes.Items.Add(cliente);
+        }
+    }
+
+    public class Clientes()
+    {
+        public string Nome { get; set; }
     }
 }
