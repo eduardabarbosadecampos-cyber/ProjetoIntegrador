@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,6 +20,7 @@ namespace ProjetoIntegrador.Pages
     /// </summary>
     public partial class PageProdutos : UserControl
     {
+        private string _imagem;
         public PageProdutos()
         {
             InitializeComponent();
@@ -25,13 +28,35 @@ namespace ProjetoIntegrador.Pages
 
         private void BtnSelecionarImagem_Click(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog dialog = new OpenFileDialog();
 
+            dialog.Title = "Selecione uma imagem";
+            dialog.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+            if (dialog.ShowDialog() == true)
+            {
+                string origem = dialog.FileName;
+
+                string pastaDestino = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images");
+
+                if (!Directory.Exists(pastaDestino))
+                    Directory.CreateDirectory(pastaDestino);
+
+                string destino = System.IO.Path.Combine(pastaDestino, System.IO.Path.GetFileName(origem));
+
+                File.Copy(origem, destino, true);
+
+                _imagem = destino;
+            }
         }
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(tbCodigoProd.Text) || string.IsNullOrEmpty(tbProduto.Text) || string.IsNullOrEmpty(tbPreco.Text))
+                return;
 
-            gridProdutos.Children.Add(CriarCardProduto("/produto tenis.jpg", Convert.ToInt32(tbCodigoProd.Text), tbProduto.Text, Convert.ToDecimal(tbPreco.Text)));
+
+            gridProdutos.Children.Add(CriarCardProduto(_imagem, Convert.ToInt32(tbCodigoProd.Text), tbProduto.Text, Convert.ToDecimal(tbPreco.Text)));
 
         }
 
@@ -55,7 +80,7 @@ namespace ProjetoIntegrador.Pages
                 Height = 150,
                 Stretch = Stretch.Uniform,
                 Margin = new Thickness(10),
-                Source = new BitmapImage(new Uri(imagem, UriKind.Relative))
+                Source = new BitmapImage(new Uri(imagem, UriKind.Absolute))
             });
 
             stack.Children.Add(new TextBlock
