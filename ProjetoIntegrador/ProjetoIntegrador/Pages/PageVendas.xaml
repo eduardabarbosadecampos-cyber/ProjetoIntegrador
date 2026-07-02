@@ -9,40 +9,400 @@
 
     <!-- VENDAS -->
     <Grid Background="White">
-        <WrapPanel Grid.Row="0" HorizontalAlignment="Left">
-            <Label Content="Cliente" Canvas.Left="77" Canvas.Top="16" Height="57" Width="110" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox Canvas.Left="192" TextWrapping="Wrap" Text="Buscar Cliente" Canvas.Top="24" Width="204" Height="42" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25"/>
-        </WrapPanel>
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Left"/>
 
         <Canvas x:Name="MenuVendas" Background="White">
-            <Label Content="Cliente" Canvas.Left="77" Canvas.Top="16" Height="57" Width="110" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox Canvas.Left="192" TextWrapping="Wrap" Text="Buscar Cliente" Canvas.Top="24" Width="204" Height="42" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25"/>
-            <Label Content="Produto" Canvas.Left="116" Canvas.Top="129" Height="57" Width="120" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Label Content="Quantidade" Canvas.Left="69" Canvas.Top="186" Height="57" Width="169" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Content="Desconto" Canvas.Left="92" Canvas.Top="241" Height="57" Width="144" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Tamanho" Canvas.Left="618" Canvas.Top="129" Height="57" Width="132" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Preço Unitário" Canvas.Left="551" Canvas.Top="186" Height="57" Width="199" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Total" Canvas.Left="679" Canvas.Top="241" Height="57" Width="71" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox Canvas.Left="241" TextWrapping="Wrap" Text="" Canvas.Top="136" Width="204" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox Canvas.Left="243" TextWrapping="Wrap" Text="" Canvas.Top="193" Width="204" Height="43" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox Canvas.Left="243" TextWrapping="Wrap" Text="" Canvas.Top="249" Width="204" Height="43" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.534,-0.233"/>
-            <TextBox Canvas.Left="755" TextWrapping="Wrap" Text="" Canvas.Top="136" Width="48" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Cor" Canvas.Left="848" Canvas.Top="129" Height="57" Width="58" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.592,0.558"/>
-            <TextBox Canvas.Left="911" TextWrapping="Wrap" Text="" Canvas.Top="136" Width="48" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1.123,0.421"/>
-            <TextBox Canvas.Left="755" TextWrapping="Wrap" Text="" Canvas.Top="191" Width="204" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox Canvas.Left="755" TextWrapping="Wrap" Text="" Canvas.Top="248" Width="204" Height="43" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button Content="Adicionar item" Canvas.Left="145" Canvas.Top="320" Height="40" Width="200" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FFBFFDE8" RenderTransformOrigin="0.525,0.3"/>
-            <Button Content="Remover item" Canvas.Left="618" Canvas.Top="320" Height="40" Width="200" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFBEBE"/>
-            <Label Content="+" Canvas.Left="102" Canvas.Top="313" Height="57" Width="30" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="2.796,0.488"/>
-            <Label Content="-" Canvas.Left="591" Canvas.Top="313" Height="40" Width="22" FontSize="30" RenderTransformOrigin="2.796,0.488" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Itens no carrinho:" Canvas.Left="116" Canvas.Top="413" Height="57" Width="242" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Forma de Pagamento" Canvas.Left="98" Canvas.Top="508" Height="58" Width="294" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox Canvas.Left="409" TextWrapping="Wrap" Text="" Canvas.Top="516" Width="204" Height="42" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Total Geral" Canvas.Left="237" Canvas.Top="566" Height="57" Width="154" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button Content="❌ Cancelar" Canvas.Left="137" Canvas.Top="660" Height="54" Width="200" FontSize="25" Background="#FF22C55E" RenderTransformOrigin="0.525,0.3" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Style="{StaticResource BotaoArredondado}" />
-            <Button Content="✔ Finalizar Venda" Canvas.Left="706" Canvas.Top="662" Height="54" Width="253" FontSize="25" Background="#FF22C55E" RenderTransformOrigin="0.514,0.538" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource BotaoArredondado}" />
-            <Label Content="" Canvas.Left="409" Canvas.Top="571" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Width="99"/>
+            <Grid Margin="15">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="95"/>
+                    <RowDefinition Height="95"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="45"/>
+
+                </Grid.RowDefinitions>
+
+                <!-- ========================= -->
+                <!-- CABEÇALHO -->
+                <!-- ========================= -->
+
+                <Border Grid.Row="0"
+                        Background="White"
+                        CornerRadius="8"
+                        Padding="15" Margin="0,-5,-304,0">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="350"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock
+                                Text="🛒"
+                                FontSize="28"
+                                Foreground="#28A745"/>
+
+                            <StackPanel Margin="10,0">
+
+                                <TextBlock
+                                    Text="PDV"
+                                    FontWeight="Bold"
+                                    FontSize="24"/>
+                                <TextBlock
+                                    Text="Sistema de Venda"
+                                    Foreground="Gray"/>
+
+                            </StackPanel>
+
+                        </StackPanel>
+
+                        <StackPanel
+                            Grid.Column="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center">
+
+                            <Border
+                                Background="#E8F5E9"
+                                CornerRadius="5"
+                                Padding="15,8"
+                                Margin="0,0,15,0">
+
+                                <TextBlock
+                                    Text="● CAIXA ABERTO"
+                                    Foreground="#2E7D32"
+                                    FontWeight="Bold"/>
+
+                            </Border>
+
+                            <TextBlock
+                                Text="10:45"
+                                FontSize="22"
+                                Margin="10,0"/>
+
+                            <TextBlock
+                                Text="27/05/2024"
+                                VerticalAlignment="Center"/>
+
+                        </StackPanel>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- ========================= -->
+                <!-- CLIENTE / VENDEDOR -->
+                <!-- ========================= -->
+
+                <Border Grid.Row="1"
+                        Margin="0,5,-304,58"
+                        Background="White"
+                        CornerRadius="8"
+                        Padding="15" Grid.RowSpan="2">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <TextBlock
+                                Text="Cliente (F3)"
+                                FontWeight="Bold"/>
+
+                            <DockPanel Margin="0,5">
+
+                                <TextBox Height="35"
+                                         FontSize="15"
+                                         VerticalContentAlignment="Center"
+                                         Text="Digite o nome ou CPF do cliente"/>
+
+                                <Button Width="40"
+                                        Margin="5,0"
+                                        Content="🔍"/>
+
+                            </DockPanel>
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    Margin="25,0,0,0"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- ========================= -->
+                <!-- PRODUTO -->
+                <!-- ========================= -->
+
+                <Border Grid.Row="2"
+                        Background="White"
+                        CornerRadius="8"
+                        Padding="15" Margin="0,20,-304,483" Grid.RowSpan="2">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="180"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <TextBlock
+                                Text="Código do Produto"
+                                FontWeight="Bold"/>
+
+                            <TextBox
+                                Margin="0,5"
+                                Height="35"
+                                Text="Digite o código"/>
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    Margin="15,0">
+
+                            <TextBlock
+                                Text="Quantidade"
+                                FontWeight="Bold"/>
+
+                            <TextBox
+                                Margin="0,5"
+                                Height="35"
+                                Text="1"/>
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2"
+                                    Margin="15,0">
+
+                            <TextBlock
+                                Text="Desconto (%)"
+                                FontWeight="Bold"/>
+
+                            <TextBox
+                                Margin="0,5"
+                                Height="35"
+                                Text="0"/>
+
+                        </StackPanel>
+
+                        <Button Grid.Column="3"
+                                Margin="20,2,0,0"
+                                Background="#28A745"
+                                Foreground="White"
+                                FontWeight="Bold"
+                                FontSize="16"
+                                Height="55"
+                                Content="Adicionar Item"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- ========================= -->
+                <!-- TABELA -->
+                <!-- ========================= -->
+
+                <Grid Grid.Row="3" Margin="0,10">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="707*"/>
+                        <ColumnDefinition Width="96*"/>
+                        <ColumnDefinition Width="280"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Background="White"
+                        CornerRadius="8"
+                        Margin="0,0,10,0" Grid.ColumnSpan="2">
+
+                        <DataGrid
+                            AutoGenerateColumns="False"
+                            HeadersVisibility="Column"
+                            CanUserAddRows="False" Margin="0,38,0,33">
+
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn Header="Código" Width="80"/>
+
+                                <DataGridTextColumn Header="Produto" Width="200"/>
+
+                                <DataGridTextColumn Header="Cor" Width="100"/>
+
+                                <DataGridTextColumn Header="Tam." Width="70"/>
+
+                                <DataGridTextColumn Header="Qtd." Width="60"/>
+
+                                <DataGridTextColumn Header="Unitário" Width="100"/>
+
+                                <DataGridTextColumn Header="Desc." Width="80"/>
+
+                                <DataGridTextColumn Header="Total" Width="100"/>
+
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+
+                    </Border>
+
+                    <!-- TOTAL -->
+
+                    <Border Grid.Column="1"
+                            Background="White"
+                            CornerRadius="8"
+                            Padding="20" Margin="391,42,-290,-15" Grid.ColumnSpan="2">
+
+                        <StackPanel Margin="0,0,0,158">
+
+                            <TextBlock
+                                Text="Subtotal:"
+                                FontSize="18"/>
+
+                            <TextBlock
+                                Text="R$ 0,00"
+                                FontSize="22"
+                                HorizontalAlignment="Right"/>
+
+                            <Separator Margin="0,15"/>
+
+                            <TextBlock
+                                Text="Desconto:"
+                                FontSize="18"/>
+
+                            <TextBlock
+                                Text="R$ 0,00"
+                                FontSize="22"
+                                HorizontalAlignment="Right"/>
+
+                            <Separator Margin="0,15"/>
+
+                            <TextBlock
+                                Text="TOTAL"
+                                FontWeight="Bold"
+                                FontSize="22"/>
+
+                            <TextBlock
+                                Text="R$ 0,00"
+                                FontSize="34"
+                                FontWeight="Bold"
+                                Foreground="#28A745"
+                                HorizontalAlignment="Right"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Grid>
+
+                <!-- ========================= -->
+                <!-- PAGAMENTO -->
+                <!-- ========================= -->
+
+                <Border Grid.Row="3"
+                        Background="White"
+                        CornerRadius="8"
+                        Padding="15" Margin="0,455,-304,38" Grid.RowSpan="2">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="220"/>
+                            <ColumnDefinition Width="170"/>
+                            <ColumnDefinition Width="170"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="170"/>
+                            <ColumnDefinition Width="170"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <TextBlock Text="Forma de Pagamento"/>
+
+                            <ComboBox Height="35">
+
+                                <ComboBoxItem>Dinheiro</ComboBoxItem>
+
+                                <ComboBoxItem>PIX</ComboBoxItem>
+
+                                <ComboBoxItem>Cartão</ComboBoxItem>
+
+                            </ComboBox>
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    Margin="15,0">
+
+                            <TextBlock Text="Valor Recebido"/>
+
+                            <TextBox Height="35"/>
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2"
+                                    Margin="15,0">
+
+                            <TextBlock Text="Troco"/>
+
+                            <TextBlock
+                                Text="R$ 0,00"
+                                Foreground="#28A745"
+                                FontSize="24"/>
+
+                        </StackPanel>
+
+                        <Button Grid.Column="4"
+                                Background="#DC3545"
+                                Foreground="White"
+                                FontWeight="Bold"
+                                FontSize="18"
+                                Margin="15"
+                                Content="Cancelar Venda"/>
+
+                        <Button Grid.Column="5"
+                                Background="#28A745"
+                                Foreground="White"
+                                FontWeight="Bold"
+                                FontSize="18"
+                                Margin="15"
+                                Content="Finalizar Venda"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- ========================= -->
+                <!-- ATALHOS -->
+                <!-- ========================= -->
+
+            </Grid>
+
         </Canvas>
+
     </Grid>
 
 </UserControl>

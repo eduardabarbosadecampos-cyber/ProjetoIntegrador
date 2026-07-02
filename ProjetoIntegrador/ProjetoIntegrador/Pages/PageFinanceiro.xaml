@@ -158,7 +158,7 @@
                     <TextBlock Text="R$ 0,00"
                            FontSize="30"
                            FontWeight="Bold"
-                           Canvas.Left="68"
+                           Canvas.Left="53"
                            Canvas.Top="74" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
                 </Canvas>
