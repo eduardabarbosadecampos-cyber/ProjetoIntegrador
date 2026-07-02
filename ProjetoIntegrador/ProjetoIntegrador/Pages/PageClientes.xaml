@@ -42,11 +42,9 @@
 
         <DataGrid x:Name="dgClientes" Grid.Row="1"
       AutoGenerateColumns="False"
-<<<<<<< HEAD
+
       CanUserAddRows="False" Canvas.Top="85" VerticalAlignment="Top" Canvas.Left="10" Height="644" Margin="106,121,105,0">
-=======
-      CanUserAddRows="False" VerticalAlignment="Top" Height="644" Margin="22,121,10,0">
->>>>>>> 202600fbe996206413df2a851cb595974b86d26f
+
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"
@@ -74,7 +72,7 @@
 
         </DataGrid>
         <Button Content="Novo Cliente" HorizontalAlignment="Left" Margin="850,70,0,0" Grid.Row="1" VerticalAlignment="Top" Width="98" Height="25"/>
-<<<<<<< HEAD
+
         <TextBox HorizontalAlignment="Left" Margin="88,29,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20"/>
         <Label Content="Nome:" HorizontalAlignment="Left" Margin="34,26,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Campo de Cadastro:" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
@@ -84,18 +82,6 @@
         <Label Content="Cidade:" HorizontalAlignment="Left" Margin="315,51,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="367,29,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20"/>
         <TextBox HorizontalAlignment="Left" Margin="367,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20"/>
-=======
-        <TextBox HorizontalAlignment="Left" Margin="88,29,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20" />
-        <Label Content="Nome:" HorizontalAlignment="Left" Margin="34,26,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Campo de Cadastro:" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
-        <Label Content="Telefone:" HorizontalAlignment="Left" Margin="22,57,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="88,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20" />
-        <Label Content="CPF:" HorizontalAlignment="Left" Margin="329,25,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Cidade" HorizontalAlignment="Left" Margin="315,51,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="367,29,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20" />
-        <TextBox HorizontalAlignment="Left" Margin="367,57,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20" />
-        <Label Content="Compras:" HorizontalAlignment="Left" Margin="594,39,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="669,42,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20"/>
->>>>>>> 202600fbe996206413df2a851cb595974b86d26f
+
     </Grid>
 </UserControl>
