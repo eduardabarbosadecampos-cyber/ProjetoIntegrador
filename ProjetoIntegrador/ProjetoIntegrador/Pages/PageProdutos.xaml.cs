@@ -1,17 +1,10 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ProjetoIntegrador.Pages
 {
@@ -20,10 +13,19 @@ namespace ProjetoIntegrador.Pages
     /// </summary>
     public partial class PageProdutos : UserControl
     {
-        private string _imagem;
+        private string? _imagem;
+
         public PageProdutos()
         {
             InitializeComponent();
+            CarregarProdutos();
+        }
+
+        private void CarregarProdutos()
+        {
+            gridProdutos.Children.Clear();
+            foreach (var p in Dados.Produtos)
+                gridProdutos.Children.Add(CriarCardProduto(p.Imagem, p.Codigo, p.Nome, p.Preco));
         }
 
         private void BtnSelecionarImagem_Click(object sender, RoutedEventArgs e)
@@ -52,15 +54,58 @@ namespace ProjetoIntegrador.Pages
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(tbCodigoProd.Text) || string.IsNullOrEmpty(tbProduto.Text) || string.IsNullOrEmpty(tbPreco.Text))
+            if (string.IsNullOrWhiteSpace(tbCodigoProd.Text) ||
+                string.IsNullOrWhiteSpace(tbProduto.Text) ||
+                string.IsNullOrWhiteSpace(tbPreco.Text))
+            {
+                MessageBox.Show("Preencha código, produto e preço.");
                 return;
+            }
 
+            if (!int.TryParse(tbCodigoProd.Text, out int codigo))
+            {
+                MessageBox.Show("Código inválido.");
+                return;
+            }
 
-            gridProdutos.Children.Add(CriarCardProduto(_imagem, Convert.ToInt32(tbCodigoProd.Text), tbProduto.Text, Convert.ToDecimal(tbPreco.Text)));
+            if (Dados.BuscarProduto(codigo) != null)
+            {
+                MessageBox.Show($"Já existe um produto com o código {codigo}.");
+                return;
+            }
 
+            if (!decimal.TryParse(tbPreco.Text, out decimal preco))
+            {
+                MessageBox.Show("Preço inválido.");
+                return;
+            }
+
+            int.TryParse(tbEstoque.Text, out int estoque);
+
+            var produto = new Produto
+            {
+                Codigo = codigo,
+                Nome = tbProduto.Text,
+                Genero = (cbGenero.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "",
+                Tamanho = (cbTamanho.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "",
+                Preco = preco,
+                Estoque = estoque,
+                Imagem = _imagem
+            };
+
+            Dados.Produtos.Add(produto);
+            Dados.Salvar();
+
+            gridProdutos.Children.Add(CriarCardProduto(_imagem, codigo, produto.Nome, preco));
+
+            _imagem = null;
+            tbCodigoProd.Clear();
+            tbProduto.Clear();
+            tbPreco.Clear();
+            tbEstoque.Clear();
         }
 
-        private Border CriarCardProduto(string imagem, int codigo, string nome, decimal preco)
+        private Border CriarCardProduto(string? imagem, int codigo, string nome, decimal preco)
         {
             Border border = new Border
             {
@@ -75,17 +120,31 @@ namespace ProjetoIntegrador.Pages
 
             StackPanel stack = new StackPanel();
 
-            stack.Children.Add(new Image
+            if (!string.IsNullOrEmpty(imagem) && File.Exists(imagem))
             {
-                Height = 150,
-                Stretch = Stretch.Uniform,
-                Margin = new Thickness(10),
-                Source = new BitmapImage(new Uri(imagem, UriKind.Absolute))
-            });
+                stack.Children.Add(new Image
+                {
+                    Height = 150,
+                    Stretch = Stretch.Uniform,
+                    Margin = new Thickness(10),
+                    Source = new BitmapImage(new Uri(imagem, UriKind.Absolute))
+                });
+            }
+            else
+            {
+                stack.Children.Add(new TextBlock
+                {
+                    Text = "📦",
+                    FontSize = 90,
+                    Height = 150,
+                    TextAlignment = TextAlignment.Center,
+                    Margin = new Thickness(10)
+                });
+            }
 
             stack.Children.Add(new TextBlock
             {
-                Text = $"#{codigo.ToString()}",
+                Text = $"#{codigo}",
                 FontWeight = FontWeights.Bold,
                 FontSize = 14,
                 TextAlignment = TextAlignment.Center,

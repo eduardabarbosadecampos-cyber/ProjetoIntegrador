@@ -125,10 +125,11 @@
 
                             <DockPanel Margin="0,5">
 
-                                <TextBox Height="35"
+                                <TextBox x:Name="tbCliente"
+                                         Height="35"
                                          FontSize="15"
                                          VerticalContentAlignment="Center"
-                                         Text="Digite o nome ou CPF do cliente"/>
+                                         Text="Consumidor Final"/>
 
                                 <Button Width="40"
                                         Margin="5,0"
@@ -171,10 +172,10 @@
                                 Text="Código do Produto"
                                 FontWeight="Bold"/>
 
-                            <TextBox
+                            <TextBox x:Name="tbCodigo"
                                 Margin="0,5"
                                 Height="35"
-                                Text="Digite o código"/>
+                                Text=""/>
 
                         </StackPanel>
 
@@ -185,7 +186,7 @@
                                 Text="Quantidade"
                                 FontWeight="Bold"/>
 
-                            <TextBox
+                            <TextBox x:Name="tbQtd"
                                 Margin="0,5"
                                 Height="35"
                                 Text="1"/>
@@ -199,7 +200,7 @@
                                 Text="Desconto (%)"
                                 FontWeight="Bold"/>
 
-                            <TextBox
+                            <TextBox x:Name="tbDesc"
                                 Margin="0,5"
                                 Height="35"
                                 Text="0"/>
@@ -213,7 +214,8 @@
                                 FontWeight="Bold"
                                 FontSize="16"
                                 Height="55"
-                                Content="Adicionar Item"/>
+                                Content="Adicionar Item"
+                                Click="BtnAdicionar_Click"/>
 
                     </Grid>
 
@@ -238,28 +240,28 @@
                         CornerRadius="8"
                         Margin="0,0,10,0" Grid.ColumnSpan="2">
 
-                        <DataGrid
+                        <DataGrid x:Name="dgItens"
                             AutoGenerateColumns="False"
                             HeadersVisibility="Column"
                             CanUserAddRows="False" Margin="0,38,0,33">
 
                             <DataGrid.Columns>
 
-                                <DataGridTextColumn Header="Código" Width="80"/>
+                                <DataGridTextColumn Header="Código" Width="80" Binding="{Binding Codigo}"/>
 
-                                <DataGridTextColumn Header="Produto" Width="200"/>
+                                <DataGridTextColumn Header="Produto" Width="200" Binding="{Binding Produto}"/>
 
-                                <DataGridTextColumn Header="Cor" Width="100"/>
+                                <DataGridTextColumn Header="Cor" Width="100" Binding="{Binding Cor}"/>
 
-                                <DataGridTextColumn Header="Tam." Width="70"/>
+                                <DataGridTextColumn Header="Tam." Width="70" Binding="{Binding Tam}"/>
 
-                                <DataGridTextColumn Header="Qtd." Width="60"/>
+                                <DataGridTextColumn Header="Qtd." Width="60" Binding="{Binding Qtd}"/>
 
-                                <DataGridTextColumn Header="Unitário" Width="100"/>
+                                <DataGridTextColumn Header="Unitário" Width="100" Binding="{Binding Unitario, StringFormat=C}"/>
 
-                                <DataGridTextColumn Header="Desc." Width="80"/>
+                                <DataGridTextColumn Header="Desc." Width="80" Binding="{Binding Desc, StringFormat={}{0}%}"/>
 
-                                <DataGridTextColumn Header="Total" Width="100"/>
+                                <DataGridTextColumn Header="Total" Width="100" Binding="{Binding Total, StringFormat=C}"/>
 
                             </DataGrid.Columns>
 
@@ -280,7 +282,7 @@
                                 Text="Subtotal:"
                                 FontSize="18"/>
 
-                            <TextBlock
+                            <TextBlock x:Name="txtSubtotal"
                                 Text="R$ 0,00"
                                 FontSize="22"
                                 HorizontalAlignment="Right"/>
@@ -291,7 +293,7 @@
                                 Text="Desconto:"
                                 FontSize="18"/>
 
-                            <TextBlock
+                            <TextBlock x:Name="txtDescontoTotal"
                                 Text="R$ 0,00"
                                 FontSize="22"
                                 HorizontalAlignment="Right"/>
@@ -303,7 +305,7 @@
                                 FontWeight="Bold"
                                 FontSize="22"/>
 
-                            <TextBlock
+                            <TextBlock x:Name="txtTotal"
                                 Text="R$ 0,00"
                                 FontSize="34"
                                 FontWeight="Bold"
@@ -342,7 +344,7 @@
 
                             <TextBlock Text="Forma de Pagamento"/>
 
-                            <ComboBox Height="35">
+                            <ComboBox x:Name="cbPagamento" Height="35" SelectedIndex="0">
 
                                 <ComboBoxItem>Dinheiro</ComboBoxItem>
 
@@ -359,7 +361,7 @@
 
                             <TextBlock Text="Valor Recebido"/>
 
-                            <TextBox Height="35"/>
+                            <TextBox x:Name="tbRecebido" Height="35" TextChanged="tbRecebido_TextChanged"/>
 
                         </StackPanel>
 
@@ -368,7 +370,7 @@
 
                             <TextBlock Text="Troco"/>
 
-                            <TextBlock
+                            <TextBlock x:Name="txtTroco"
                                 Text="R$ 0,00"
                                 Foreground="#28A745"
                                 FontSize="24"/>
@@ -381,7 +383,8 @@
                                 FontWeight="Bold"
                                 FontSize="18"
                                 Margin="15"
-                                Content="Cancelar Venda"/>
+                                Content="Cancelar Venda"
+                                Click="BtnCancelar_Click"/>
 
                         <Button Grid.Column="5"
                                 Background="#28A745"
@@ -389,7 +392,8 @@
                                 FontWeight="Bold"
                                 FontSize="18"
                                 Margin="15"
-                                Content="Finalizar Venda"/>
+                                Content="Finalizar Venda"
+                                Click="BtnFinalizar_Click"/>
 
                     </Grid>
 

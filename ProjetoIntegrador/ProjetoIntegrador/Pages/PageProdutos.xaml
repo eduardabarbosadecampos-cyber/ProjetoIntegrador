@@ -21,13 +21,13 @@
             <TextBox x:Name="tbProduto" Width="200"/>
 
             <Label Content="Gênero:"/>
-            <ComboBox>
+            <ComboBox x:Name="cbGenero">
                 <ComboBoxItem Content="M"/>
                 <ComboBoxItem Content="F"/>
             </ComboBox>
 
             <Label Content="Tamanho:"/>
-            <ComboBox>
+            <ComboBox x:Name="cbTamanho">
                 <ComboBoxItem Content="P"/>
                 <ComboBoxItem Content="M"/>
                 <ComboBoxItem Content="GG"/>

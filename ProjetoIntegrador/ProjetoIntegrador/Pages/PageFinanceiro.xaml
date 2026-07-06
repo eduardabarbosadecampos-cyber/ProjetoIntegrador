@@ -38,10 +38,10 @@
                                    Canvas.Left="288"
                                    Canvas.Top="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                    <ComboBox Width="220"
+                    <ComboBox x:Name="cbMovimentacao" Width="220"
                                     Height="30"
                                     Canvas.Left="255"
-                                    Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                    Canvas.Top="59" SelectedIndex="0" HorizontalAlignment="Center" VerticalAlignment="Top">
 
                         <ComboBoxItem Content="Todas"/>
                         <ComboBoxItem Content="Entradas"/>
@@ -54,7 +54,8 @@
                                 Height="29"
                                 Background="White"
                                 Canvas.Left="518"
-                                Canvas.Top="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                Canvas.Top="60" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                Click="btnPesquisar_Click"/>
 
                 </Canvas>
 
@@ -86,7 +87,7 @@
                                    Canvas.Left="59"
                                    Canvas.Top="24" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                    <TextBlock Text="R$ 0,00"
+                    <TextBlock x:Name="txtEntradas" Text="R$ 0,00"
                                    FontSize="30"
                                    FontWeight="Bold"
                                    Canvas.Left="43"
@@ -120,7 +121,7 @@
                            Canvas.Left="76"
                            Canvas.Top="24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-                    <TextBlock Text="R$ 0,00"
+                    <TextBlock x:Name="txtSaidas" Text="R$ 0,00"
                            FontSize="30"
                            FontWeight="Bold"
                            Canvas.Left="43"
@@ -155,7 +156,7 @@
                            Canvas.Left="78"
                            Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                    <TextBlock Text="R$ 0,00"
+                    <TextBlock x:Name="txtLucro" Text="R$ 0,00"
                            FontSize="30"
                            FontWeight="Bold"
                            Canvas.Left="53"
@@ -168,7 +169,7 @@
 
             <!--Tabela-->
 
-            <DataGrid Width="800"
+            <DataGrid x:Name="dgMovimentos" Width="800"
                   Height="138"
                   Canvas.Top="312"
                   AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top">

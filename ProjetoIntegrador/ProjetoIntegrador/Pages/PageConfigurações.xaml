@@ -37,7 +37,7 @@
                            Canvas.Left="30"
                            Canvas.Top="130"/>
 
-                    <TextBox Width="300"
+                    <TextBox x:Name="tbNomeLoja" Width="300"
                          Height="30"
                          Canvas.Left="150"
                          Canvas.Top="125"/>
@@ -46,7 +46,7 @@
                            Canvas.Left="30"
                            Canvas.Top="172" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-                    <TextBox Width="300"
+                    <TextBox x:Name="tbCnpj" Width="300"
                          Height="30"
                          Canvas.Left="150"
                          Canvas.Top="166" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -55,7 +55,7 @@
                            Canvas.Left="30"
                            Canvas.Top="215" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-                    <TextBox Width="300"
+                    <TextBox x:Name="tbTelefone" Width="300"
                          Height="30"
                          Canvas.Left="150"
                          Canvas.Top="208" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -64,7 +64,7 @@
                            Canvas.Left="30"
                            Canvas.Top="258" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-                    <TextBox Width="300"
+                    <TextBox x:Name="tbEmail" Width="300"
                          Height="30"
                          Canvas.Left="150"
                          Canvas.Top="251" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -80,7 +80,7 @@
                            Canvas.Left="29"
                            Canvas.Top="341" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                    <ComboBox Width="200"
+                    <ComboBox x:Name="cbTema" Width="200"
                           Height="30"
                           Canvas.Left="150"
                           Canvas.Top="334" HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -92,7 +92,7 @@
                            Canvas.Left="30"
                            Canvas.Top="380" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-                    <ComboBox Width="200"
+                    <ComboBox x:Name="cbIdioma" Width="200"
                           Height="30"
                           Canvas.Left="150"
                           Canvas.Top="377" HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -101,11 +101,11 @@
                     </ComboBox>
 
                     <!-- Opções -->
-                    <CheckBox Content="Abrir caixa automaticamente"
+                    <CheckBox x:Name="chkCaixaAuto" Content="Abrir caixa automaticamente"
                           Canvas.Left="500"
                           Canvas.Top="130"/>
 
-                    <CheckBox Content="Emitir comprovante após venda"
+                    <CheckBox x:Name="chkComprovante" Content="Emitir comprovante após venda"
                           Canvas.Left="500"
                           Canvas.Top="180"/>
 
@@ -117,7 +117,8 @@
                         Foreground="White"
                         FontWeight="Bold"
                         Canvas.Left="488"
-                        Canvas.Top="367" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        Canvas.Top="367" HorizontalAlignment="Center" VerticalAlignment="Top"
+                        Click="BtnSalvar_Click"/>
 
                 </Canvas>
 

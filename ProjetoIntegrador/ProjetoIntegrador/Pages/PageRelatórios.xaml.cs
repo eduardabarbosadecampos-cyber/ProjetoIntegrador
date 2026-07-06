@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+using System;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ProjetoIntegrador.Pages
 {
@@ -21,6 +11,14 @@ namespace ProjetoIntegrador.Pages
         public PageRelatórios()
         {
             InitializeComponent();
+            CarregarIndicadores();
+        }
+
+        private void CarregarIndicadores()
+        {
+            txtTotalVendas.Text = Dados.TotalVendido.ToString("C");
+            txtQuantidade.Text = Dados.QtdVendida.ToString();
+            txtMaisVendido.Text = Dados.ProdutoMaisVendido();
         }
     }
 }

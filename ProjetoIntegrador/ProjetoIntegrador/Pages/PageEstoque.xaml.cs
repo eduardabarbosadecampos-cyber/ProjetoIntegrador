@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ProjetoIntegrador.Pages
 {
@@ -21,6 +13,35 @@ namespace ProjetoIntegrador.Pages
         public PageEstoque()
         {
             InitializeComponent();
+            CarregarEstoque();
+        }
+
+        private void CarregarEstoque()
+        {
+            dgEstoque.ItemsSource = Dados.Produtos.ToList();
+        }
+
+        private void btnAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            txtPesquisar.Clear();
+            CarregarEstoque();
+        }
+
+        private void btnPesquisar_Click(object sender, RoutedEventArgs e)
+        {
+            string termo = txtPesquisar.Text?.Trim() ?? "";
+
+            if (string.IsNullOrEmpty(termo))
+            {
+                CarregarEstoque();
+                return;
+            }
+
+            dgEstoque.ItemsSource = Dados.Produtos
+                .Where(p => p.Nome.Contains(termo, StringComparison.OrdinalIgnoreCase)
+                         || p.Cor.Contains(termo, StringComparison.OrdinalIgnoreCase)
+                         || p.Codigo.ToString() == termo)
+                .ToList();
         }
     }
 }
