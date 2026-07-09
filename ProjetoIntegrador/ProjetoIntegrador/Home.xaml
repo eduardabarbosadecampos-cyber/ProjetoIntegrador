@@ -137,19 +137,6 @@
                     </StackPanel>
                 </Grid>
             </Border>
-        
-         <!--ESTOQUE-->
-        
-
-
-
-
-
-            
-         <!--Financeiro--> 
-        
- 
-
         </Grid>
         <ContentControl x:Name="Ctrl" Grid.Column="1" Margin="0,94,0,0"/>
     </Grid>
